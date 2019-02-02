@@ -12,3 +12,4 @@ yarn start
 - make custom drawnavigator component
 - move to redux
 - restore last opened board
+- use new react hooks

@@ -1,6 +1,8 @@
 import React from 'react';
-import { ScrollView, Text, StyleSheet, View } from 'react-native';
+import { StyleSheet, ScrollView } from 'react-native';
 import { getBoards } from '../services/Api';
+import { COLORS } from '../services/consts';
+import { BoardList } from '../components/BoardList';
 
 export default class ListScreen extends React.Component {
     constructor(props) {
@@ -10,38 +12,28 @@ export default class ListScreen extends React.Component {
         };
     }
 
-    getBoards = () => this.state.boards.map(b => {
-        return (
-            <View key={b.id}>
-                <Text>{b.title}</Text>
-                <Text>{b.desc}</Text>
-            </View>
-        );
-    })
-
     componentDidMount() {
         const boards = getBoards();
         this.setState({
-            boards
+            boards: [...boards]
         });
     }
 
     render() {
-        const boards = this.getBoards();
-
         return (
             <ScrollView style={styles.container}>
-                {boards}
+                <BoardList
+                    boards={this.state.boards}
+                />
             </ScrollView>
         );
     }
-
 }
 
 const styles = StyleSheet.create({
     container: {
         flex: 1,
-        paddingTop: 15,
-        backgroundColor: '#fff',
+        backgroundColor: COLORS.MAIN_BG,
+        color: COLORS.FONT_LIGHT,
     }
-});
+})
