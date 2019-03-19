@@ -2,7 +2,7 @@ import React from 'react';
 import { ScrollView, Text, StyleSheet } from 'react-native';
 import { getTodosByBoard } from '../services/Api';
 
-export default class ListScreen extends React.Component {
+export class TodosScreen extends React.Component {
     constructor(props) {
         super(props);
         this.state = {
@@ -29,7 +29,6 @@ export default class ListScreen extends React.Component {
             </ScrollView>
         );
     }
-
 }
 
 const styles = StyleSheet.create({

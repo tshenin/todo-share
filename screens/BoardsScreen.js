@@ -4,7 +4,7 @@ import { getBoards } from '../services/Api';
 import { COLORS } from '../services/consts';
 import { BoardList } from '../components/BoardList';
 
-export default class ListScreen extends React.Component {
+export default class BoardsScreen extends React.Component {
     constructor(props) {
         super(props);
         this.state = {
@@ -13,7 +13,7 @@ export default class ListScreen extends React.Component {
     }
 
     componentDidMount() {
-        const boards = getBoards();
+        const boards = await getBoards();
         this.setState({
             boards: [...boards]
         });

@@ -1,32 +1,16 @@
 import React from 'react';
-import { createStackNavigator, createDrawerNavigator } from 'react-navigation';
-import ListScreen from '../screens/ListScreen';
-import BoardsScreen from '../screens/BoardsScreen';
-import { getBoards } from '../services/Api';
+import { createDrawerNavigator } from 'react-navigation';
+import { TodosScreen } from '../screens/TodosScreen';
+import { CustomDrawerContent } from '../components/CustomDrawerContent';
 
-const BoardsStacks = {};
-const boards = getBoards();
-// todo move custom to component
-boards.forEach(board => {
-    BoardsStacks[board.title] = createStackNavigator({
-        [board.id]: {
-            screen: ListScreen,
-            navigationOptions: {
-                title: board.title,
-            },
-            params: {
-                boardId: board.id
-            }
+
+export default createDrawerNavigator(
+    {
+        Todos: {
+            screen: TodosScreen,
         }
-    });
-});
-
-const BoardsStack = createStackNavigator({ BoardsScreen });
-BoardsStack.navigationOptions = {
-    title: 'All boards'
-};
-
-export default createDrawerNavigator({
-    ...BoardsStacks,
-    BoardsStack
-});
+    },
+    {
+        contentComponent: CustomDrawerContent,
+    }
+);
