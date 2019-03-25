@@ -2,6 +2,7 @@ import React from 'react';
 import { StyleSheet, ScrollView } from 'react-native';
 import { getBoards } from '../services/Api';
 import { BoardList } from '../components/BoardList';
+import { Header } from '../components/Header';
 
 export class BoardsScreen extends React.Component {
     constructor(props) {
@@ -26,6 +27,14 @@ export class BoardsScreen extends React.Component {
                 />
             </ScrollView>
         );
+    }
+};
+
+BoardsScreen.navigationOptions = (props) => {
+    const title = 'Boards';
+    return {
+        title,
+        header: () => <Header title={title}></Header>,
     }
 }
 

@@ -15,7 +15,7 @@ const getLeftPadding = i => isEven(i)
 
 export const BoardItem = (props) => {
     const { board, index } = props;
-    const onPress = e => console.log(e);
+    const onPress = () => { };
 
     return (
         <View style={[styles.wrapper, {
@@ -41,7 +41,7 @@ const styles = StyleSheet.create({
         width: '50%',
     },
     underlay: {
-        minHeight: 300,
+        minHeight: 250,
         borderRadius: 20,
     },
     item: {
