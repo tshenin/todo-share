@@ -15,14 +15,21 @@ const getLeftPadding = i => isEven(i)
 
 export const BoardItem = (props) => {
     const { board, index } = props;
+    const onPress = e => console.log(e);
 
     return (
         <View style={[styles.wrapper, {
             paddingRight: getRightPadding(index),
             paddingLeft: getLeftPadding(index)
         }]}>
-            <TouchableHighlight style={styles.item}>
-                <Text style={styles.text}>{board.title}</Text>
+            <TouchableHighlight
+                style={styles.underlay}
+                underlayColor="black"
+                onPress={onPress}
+            >
+                <View style={styles.item}>
+                    <Text style={styles.text}>{board.title}</Text>
+                </View>
             </TouchableHighlight>
         </View>
     );
@@ -30,8 +37,12 @@ export const BoardItem = (props) => {
 
 const styles = StyleSheet.create({
     wrapper: {
+        flex: 1,
         width: '50%',
+    },
+    underlay: {
         minHeight: 300,
+        borderRadius: 20,
     },
     item: {
         flex: 1,
