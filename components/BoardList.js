@@ -4,8 +4,9 @@ import { View, StyleSheet } from 'react-native';
 
 export const BoardList = (props) => {
     const { boards } = props;
-    const boardItems = boards.map(b => (
+    const boardItems = boards.map((b, i) => (
         <BoardItem
+            index={i}
             board={b}
             key={b.id}
         />
@@ -21,5 +22,6 @@ export const BoardList = (props) => {
 const styles = StyleSheet.create({
     container: {
         flex: 1,
+        flexDirection: 'row',
     }
 });

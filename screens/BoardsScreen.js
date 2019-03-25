@@ -1,10 +1,9 @@
 import React from 'react';
 import { StyleSheet, ScrollView } from 'react-native';
 import { getBoards } from '../services/Api';
-import { COLORS } from '../services/consts';
 import { BoardList } from '../components/BoardList';
 
-export default class BoardsScreen extends React.Component {
+export class BoardsScreen extends React.Component {
     constructor(props) {
         super(props);
         this.state = {
@@ -12,7 +11,7 @@ export default class BoardsScreen extends React.Component {
         };
     }
 
-    componentDidMount() {
+    async componentDidMount() {
         const boards = await getBoards();
         this.setState({
             boards: [...boards]
@@ -33,7 +32,5 @@ export default class BoardsScreen extends React.Component {
 const styles = StyleSheet.create({
     container: {
         flex: 1,
-        backgroundColor: COLORS.MAIN_BG,
-        color: COLORS.FONT_LIGHT,
     }
 })

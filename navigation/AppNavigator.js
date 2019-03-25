@@ -1,8 +1,14 @@
 import React from 'react';
-import { createAppContainer, createSwitchNavigator } from 'react-navigation';
+import { createAppContainer, createStackNavigator } from 'react-navigation';
+import { BoardsScreen } from '../screens/BoardsScreen';
 
-import DrawerNavigator from './DrawerNavigator';
+const AppNavigator = createStackNavigator(
+    {
+        Boards: BoardsScreen,
+    },
+    {
+        initialRouteName: "Boards"
+    }
+);
 
-export default createAppContainer(createSwitchNavigator({
-    Drawer: DrawerNavigator,
-}));
+export default createAppContainer(AppNavigator);
