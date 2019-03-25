@@ -1,7 +1,7 @@
 import React from 'react';
 import { TouchableHighlight, Text, StyleSheet, View } from 'react-native';
 
-const BASE_PADDING = 10;
+const BASE_PADDING = 20;
 
 const isEven = i => i % 2 === 0;
 
@@ -36,14 +36,15 @@ const styles = StyleSheet.create({
     item: {
         flex: 1,
         backgroundColor: '#5e1c73',
-        paddingTop: 20,
-        paddingLeft: 10,
-        paddingRight: 10,
-        paddingRight: 10,
+        paddingTop: 40,
+        paddingLeft: 20,
+        paddingRight: 20,
+        paddingRight: 20,
         borderRadius: 20,
     },
     text: {
         color: 'white',
         fontSize: 24,
+        fontWeight: '200',
     }
 });
