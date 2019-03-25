@@ -5,11 +5,17 @@ const BASE_PADDING = 10;
 
 const isEven = i => i % 2 === 0;
 
+const getRightPadding = i => isEven(i)
+    ? BASE_PADDING / 2
+    : BASE_PADDING;
+
+const getLeftPadding = i => isEven(i)
+    ? BASE_PADDING
+    : BASE_PADDING / 2;
 
 export const BoardItem = (props) => {
     const { board, index } = props;
-    const getRightPadding = i => isEven(i) ? BASE_PADDING / 2 : BASE_PADDING;
-    const getLeftPadding = i => isEven(i) ? BASE_PADDING : BASE_PADDING / 2;
+
     return (
         <View style={[styles.wrapper, {
             paddingRight: getRightPadding(index),
@@ -36,7 +42,6 @@ const styles = StyleSheet.create({
         paddingRight: 10,
         borderRadius: 20,
     },
-
     text: {
         color: 'white',
         fontSize: 24,
