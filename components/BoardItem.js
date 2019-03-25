@@ -14,8 +14,10 @@ const getLeftPadding = i => isEven(i)
     : BASE_PADDING / 2;
 
 export const BoardItem = (props) => {
-    const { board, index } = props;
-    const onPress = () => { };
+    const { board, index, navigation } = props;
+    const onPress = () => {
+        navigation.navigate('Todos', { boardId: board.id })
+    };
 
     return (
         <View style={[styles.wrapper, {

@@ -24,6 +24,7 @@ export class BoardsScreen extends React.Component {
             <ScrollView style={styles.container}>
                 <BoardList
                     boards={this.state.boards}
+                    navigation={this.props.navigation}
                 />
             </ScrollView>
         );

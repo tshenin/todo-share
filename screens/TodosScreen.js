@@ -1,6 +1,7 @@
 import React from 'react';
 import { ScrollView, Text, StyleSheet } from 'react-native';
 import { getTodosByBoard } from '../services/Api';
+import { Header } from '../components/Header';
 
 export class TodosScreen extends React.Component {
     constructor(props) {
@@ -28,6 +29,14 @@ export class TodosScreen extends React.Component {
                 {todos}
             </ScrollView>
         );
+    }
+}
+
+TodosScreen.navigationOptions = (props) => {
+    const title = 'Todos';
+    return {
+        title,
+        header: () => <Header title={title}></Header>,
     }
 }
 

@@ -9,7 +9,6 @@ yarn start
 ```
 
 ### Todo
-- add draweritem to separate component
 - move to redux
 - restore last opened board
 - use new react hooks

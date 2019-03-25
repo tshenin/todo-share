@@ -3,11 +3,12 @@ import { BoardItem } from './BoardItem';
 import { View, StyleSheet } from 'react-native';
 
 export const BoardList = (props) => {
-    const { boards } = props;
+    const { boards, navigation } = props;
     const boardItems = boards.map((b, i) => (
         <BoardItem
             index={i}
             board={b}
+            navigation={navigation}
             key={b.id}
         />
     ));
