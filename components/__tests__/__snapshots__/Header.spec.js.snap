@@ -1,0 +1,27 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Render Header with title 1`] = `
+<View
+  style={
+    Object {
+      "backgroundColor": "white",
+      "paddingBottom": 40,
+      "paddingLeft": 40,
+      "paddingRight": 10,
+      "paddingTop": 52,
+    }
+  }
+>
+  <Text
+    style={
+      Object {
+        "color": "#5e1c73",
+        "fontSize": 48,
+        "fontWeight": "300",
+      }
+    }
+  >
+    test
+  </Text>
+</View>
+`;
