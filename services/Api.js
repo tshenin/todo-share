@@ -9,4 +9,11 @@ export const getBoards = async () => {
     }
 }
 
-export const getTodosByBoard = (id) => [];
+export const getTodosByBoard = async id => {
+    try {
+        const response = await request('GET', `todos?board=${id}`);
+        return response.data.data;
+    } catch (e) {
+        throw (e);
+    }
+};

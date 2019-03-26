@@ -16,3 +16,4 @@ yarn start
 - add linter
 - find a way to make it more functional way
 - use environment variables
+- add ability to add image on background of board

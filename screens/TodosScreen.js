@@ -11,9 +11,9 @@ export class TodosScreen extends React.Component {
         };
     }
 
-    componentDidMount() {
-        const boardId = this.props.navigation.getParam('boardId')
-        const todos = getTodosByBoard(boardId)
+    async componentDidMount() {
+        const boardId = this.props.navigation.getParam('boardId');
+        const todos = await getTodosByBoard(boardId);
         this.setState({
             todos
         });
