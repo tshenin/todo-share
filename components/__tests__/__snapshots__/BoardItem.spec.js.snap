@@ -47,10 +47,21 @@ exports[`Render BoardsItem 1`] = `
             "color": "white",
             "fontSize": 24,
             "fontWeight": "300",
+            "lineHeight": 36,
           }
         }
       >
         Test title
+      </Text>
+      <Text
+        style={
+          Object {
+            "color": "rgba(255, 255, 255, 0.8)",
+            "fontWeight": "200",
+          }
+        }
+      >
+        Test desc
       </Text>
     </View>
   </View>
