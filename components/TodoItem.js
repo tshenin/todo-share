@@ -30,16 +30,16 @@ const styles = StyleSheet.create({
     item: {
         flex: 1,
         borderBottomWidth: 1,
-        borderBottomColor: '#e9e9e9',
+        borderBottomColor: 'rgba(0, 0, 0, 0.1)',
         paddingBottom: 10,
     },
     title: {
-        fontWeight: '300',
         fontSize: 24,
+        fontWeight: '300',
         lineHeight: 36,
     },
     desc: {
         fontWeight: '200',
-        color: '#cacaca'
+        color: 'rgba(0, 0, 0, 0.6)'
     }
 });

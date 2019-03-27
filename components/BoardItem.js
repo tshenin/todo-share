@@ -23,7 +23,8 @@ export const BoardItem = (props) => {
                 onPress={onPress}
             >
                 <View style={styles.item}>
-                    <Text style={styles.text}>{board.title}</Text>
+                    <Text style={styles.title}>{board.title}</Text>
+                    <Text style={styles.desc}>{board.desc}</Text>
                 </View>
             </TouchableHighlight>
         </View>
@@ -46,9 +47,14 @@ const styles = StyleSheet.create({
         padding: 20,
         borderRadius: 20,
     },
-    text: {
+    title: {
         color: 'white',
         fontSize: 24,
         fontWeight: '300',
+        lineHeight: 36,
+    },
+    desc: {
+        fontWeight: '200',
+        color: 'rgba(255, 255, 255, 0.8)'
     }
 });
