@@ -10,10 +10,9 @@ yarn start
 
 ### Todo
 - move to redux
-- restore last opened board
-- use new react hooks
-- add tests
+- use react hooks
 - add linter
 - find a way to make it more functional way
-- use environment variables
+- use environment variables to provide different api addresses and so on
 - add ability to add image on background of board
+- move colors to constants file
