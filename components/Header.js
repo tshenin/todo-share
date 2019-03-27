@@ -13,14 +13,13 @@ export const Header = props => {
 const styles = StyleSheet.create({
     container: {
         backgroundColor: 'white',
-        paddingTop: 52,
+        paddingTop: 80,
         paddingLeft: 40,
-        paddingBottom: 40,
-        paddingRight: 10,
+        paddingRight: 20,
     },
     title: {
         fontSize: 48,
+        fontWeight: 'bold',
         color: '#5e1c73',
-        fontWeight: '300'
     }
 })

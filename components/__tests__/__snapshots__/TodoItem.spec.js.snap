@@ -32,6 +32,7 @@ exports[`Render TodoItem 1`] = `
       style={
         Object {
           "fontSize": 24,
+          "fontWeight": "300",
           "lineHeight": 36,
         }
       }

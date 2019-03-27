@@ -34,6 +34,7 @@ const styles = StyleSheet.create({
         paddingBottom: 10,
     },
     title: {
+        fontWeight: '300',
         fontSize: 24,
         lineHeight: 36,
     },

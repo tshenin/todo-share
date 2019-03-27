@@ -45,7 +45,6 @@ exports[`Render main screen 1`] = `
               "bottom": 0,
               "left": 0,
               "opacity": 1,
-              "paddingTop": 64,
               "position": "absolute",
               "right": 0,
               "top": 0,
@@ -68,43 +67,47 @@ exports[`Render main screen 1`] = `
                 "flex": 1,
               }
             }
-          />
-        </View>
-      </View>
-      <View
-        onLayout={[Function]}
-        pointerEvents="box-none"
-        style={
-          Object {
-            "left": 0,
-            "position": "absolute",
-            "right": 0,
-            "top": 0,
-          }
-        }
-      >
-        <View
-          style={
-            Object {
-              "backgroundColor": "white",
-              "paddingBottom": 40,
-              "paddingLeft": 40,
-              "paddingRight": 10,
-              "paddingTop": 52,
-            }
-          }
-        >
-          <Text
-            style={
-              Object {
-                "color": "#5e1c73",
-                "fontSize": 48,
-                "fontWeight": "300",
-              }
-            }
           >
-            Boards
-          </Text>
+            <View
+              style={
+                Object {
+                  "flex": 1,
+                  "flexDirection": "column-reverse",
+                  "overflow": "hidden",
+                }
+              }
+            >
+              <View
+                style={
+                  Object {
+                    "flex": 1,
+                  }
+                }
+              />
+              <View
+                style={
+                  Object {
+                    "backgroundColor": "white",
+                    "paddingLeft": 40,
+                    "paddingRight": 20,
+                    "paddingTop": 80,
+                  }
+                }
+              >
+                <Text
+                  style={
+                    Object {
+                      "color": "#5e1c73",
+                      "fontSize": 48,
+                      "fontWeight": "bold",
+                    }
+                  }
+                >
+                  Boards
+                </Text>
+              </View>
+            </View>
+          </View>
         </View>
       </View>
     </View>

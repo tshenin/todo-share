@@ -1,27 +1,20 @@
 import React from 'react';
 import { TouchableHighlight, Text, StyleSheet, View } from 'react-native';
 
-const BASE_PADDING = 20;
-
 const isEven = i => i % 2 === 0;
-
-const getRightPadding = i => isEven(i)
-    ? BASE_PADDING / 2
-    : BASE_PADDING;
-
-const getLeftPadding = i => isEven(i)
-    ? BASE_PADDING
-    : BASE_PADDING / 2;
+const getLeftPadding = i => isEven(i) ? 40 : 0;
 
 export const BoardItem = (props) => {
     const { board, index, navigation } = props;
     const onPress = () => {
-        navigation.navigate('Todos', { boardId: board.id })
+        navigation.navigate('Todos', {
+            boardId: board.id,
+            boardTitle: board.title
+        })
     };
 
     return (
         <View style={[styles.wrapper, {
-            paddingRight: getRightPadding(index),
             paddingLeft: getLeftPadding(index)
         }]}>
             <TouchableHighlight
@@ -41,6 +34,7 @@ const styles = StyleSheet.create({
     wrapper: {
         flex: 1,
         width: '50%',
+        paddingRight: 20,
     },
     underlay: {
         minHeight: 250,
@@ -49,15 +43,12 @@ const styles = StyleSheet.create({
     item: {
         flex: 1,
         backgroundColor: '#5e1c73',
-        paddingTop: 40,
-        paddingLeft: 20,
-        paddingRight: 20,
-        paddingRight: 20,
+        padding: 20,
         borderRadius: 20,
     },
     text: {
         color: 'white',
         fontSize: 24,
-        fontWeight: '200',
+        fontWeight: '300',
     }
 });

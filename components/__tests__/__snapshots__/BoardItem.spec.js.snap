@@ -6,11 +6,11 @@ exports[`Render BoardsItem 1`] = `
     Array [
       Object {
         "flex": 1,
+        "paddingRight": 20,
         "width": "50%",
       },
       Object {
-        "paddingLeft": 10,
-        "paddingRight": 20,
+        "paddingLeft": 0,
       },
     ]
   }
@@ -37,9 +37,7 @@ exports[`Render BoardsItem 1`] = `
           "backgroundColor": "#5e1c73",
           "borderRadius": 20,
           "flex": 1,
-          "paddingLeft": 20,
-          "paddingRight": 20,
-          "paddingTop": 40,
+          "padding": 20,
         }
       }
     >
@@ -48,7 +46,7 @@ exports[`Render BoardsItem 1`] = `
           Object {
             "color": "white",
             "fontSize": 24,
-            "fontWeight": "200",
+            "fontWeight": "300",
           }
         }
       >

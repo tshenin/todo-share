@@ -9,7 +9,8 @@ const AppNavigator = createStackNavigator(
         Todos: TodosScreen
     },
     {
-        initialRouteName: "Boards"
+        initialRouteName: "Boards",
+        headerMode: 'screen'
     }
 );
 

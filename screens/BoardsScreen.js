@@ -31,7 +31,7 @@ export class BoardsScreen extends React.Component {
     }
 };
 
-BoardsScreen.navigationOptions = (props) => {
+BoardsScreen.navigationOptions = () => {
     const title = 'Boards';
     return {
         title,

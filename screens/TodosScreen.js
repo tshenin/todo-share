@@ -18,7 +18,6 @@ export class TodosScreen extends React.Component {
         this.setState({ todos });
     }
 
-
     render() {
         const { todos } = this.state;
         const { navigation } = this.props;
@@ -34,7 +33,7 @@ export class TodosScreen extends React.Component {
 }
 
 TodosScreen.navigationOptions = (props) => {
-    const title = 'Todos';
+    const title = props.navigation.getParam('boardTitle');
     return {
         title,
         header: () => <Header title={title}></Header>,

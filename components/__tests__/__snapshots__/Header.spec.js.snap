@@ -5,10 +5,9 @@ exports[`Render Header with title 1`] = `
   style={
     Object {
       "backgroundColor": "white",
-      "paddingBottom": 40,
       "paddingLeft": 40,
-      "paddingRight": 10,
-      "paddingTop": 52,
+      "paddingRight": 20,
+      "paddingTop": 80,
     }
   }
 >
@@ -17,7 +16,7 @@ exports[`Render Header with title 1`] = `
       Object {
         "color": "#5e1c73",
         "fontSize": 48,
-        "fontWeight": "300",
+        "fontWeight": "bold",
       }
     }
   >
