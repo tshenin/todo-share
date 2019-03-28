@@ -1,6 +1,5 @@
 import React from 'react';
 import { StyleSheet, ScrollView, View } from 'react-native';
-import { LinearGradient } from 'expo';
 
 import { getBoards } from '../services/Api';
 import { BoardList } from '../components/BoardList';
@@ -23,7 +22,7 @@ export class BoardsScreen extends React.Component {
     }
 
     goToAddBoard = () => {
-        // this.props.navigation.navigate('');
+        this.props.navigation.navigate('AddBoard');
     }
 
     render() {
