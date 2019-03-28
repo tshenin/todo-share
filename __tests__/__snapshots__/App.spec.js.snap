@@ -83,7 +83,49 @@ exports[`Render main screen 1`] = `
                     "flex": 1,
                   }
                 }
-              />
+              >
+                <View
+                  style={
+                    Object {
+                      "flex": 1,
+                    }
+                  }
+                >
+                  <View
+                    accessible={true}
+                    isTVSelectable={true}
+                    onResponderGrant={[Function]}
+                    onResponderMove={[Function]}
+                    onResponderRelease={[Function]}
+                    onResponderTerminate={[Function]}
+                    onResponderTerminationRequest={[Function]}
+                    onStartShouldSetResponder={[Function]}
+                    style={
+                      Object {
+                        "borderRadius": 20,
+                        "bottom": 40,
+                        "position": "absolute",
+                        "right": 40,
+                      }
+                    }
+                  >
+                    <View
+                      style={
+                        Object {
+                          "backgroundColor": "#fa6c35",
+                          "borderRadius": 20,
+                          "paddingBottom": 10,
+                          "paddingLeft": 20,
+                          "paddingRight": 20,
+                          "paddingTop": 10,
+                        }
+                      }
+                    >
+                      <Text />
+                    </View>
+                  </View>
+                </View>
+              </View>
               <View
                 style={
                   Object {

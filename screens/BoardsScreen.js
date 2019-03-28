@@ -5,7 +5,7 @@ import { LinearGradient } from 'expo';
 import { getBoards } from '../services/Api';
 import { BoardList } from '../components/BoardList';
 import { Header } from '../components/Header';
-import { AddBoardButton } from '../components/AddBoardButton';
+import { AddButton } from '../components/AddButton';
 
 export class BoardsScreen extends React.Component {
     constructor(props) {
@@ -22,6 +22,10 @@ export class BoardsScreen extends React.Component {
         });
     }
 
+    goToAddBoard = () => {
+        // this.props.navigation.navigate('');
+    }
+
     render() {
         const { navigation } = this.props;
         const { boards } = this.state;
@@ -34,9 +38,7 @@ export class BoardsScreen extends React.Component {
                         navigation={navigation}
                     />
                 </ScrollView>
-                <AddBoardButton
-                    navigation={navigation}
-                />
+                <AddButton onPress={this.goToAddBoard} />
             </View>
         );
     }
