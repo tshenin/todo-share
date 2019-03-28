@@ -1,9 +1,11 @@
 import React from 'react';
 import { StyleSheet, ScrollView, View } from 'react-native';
+import { LinearGradient } from 'expo';
+
 import { getBoards } from '../services/Api';
 import { BoardList } from '../components/BoardList';
 import { Header } from '../components/Header';
-import { Button } from '../components/Button';
+import { AddBoardButton } from '../components/AddBoardButton';
 
 export class BoardsScreen extends React.Component {
     constructor(props) {
@@ -21,17 +23,20 @@ export class BoardsScreen extends React.Component {
     }
 
     render() {
+        const { navigation } = this.props;
+        const { boards } = this.state;
+
         return (
             <View style={styles.wrapper}>
                 <ScrollView style={styles.container}>
                     <BoardList
-                        boards={this.state.boards}
-                        navigation={this.props.navigation}
+                        boards={boards}
+                        navigation={navigation}
                     />
                 </ScrollView>
-                <View style={styles.addButton}>
-                    <Button title="Test" />
-                </View>
+                <AddBoardButton
+                    navigation={navigation}
+                />
             </View>
         );
     }
@@ -52,9 +57,4 @@ const styles = StyleSheet.create({
     container: {
         flex: 1,
     },
-    addButton: {
-        position: 'absolute',
-        right: 40,
-        bottom: 20,
-    }
 })
