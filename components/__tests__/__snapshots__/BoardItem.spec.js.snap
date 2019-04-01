@@ -3,16 +3,11 @@
 exports[`Render BoardsItem 1`] = `
 <View
   style={
-    Array [
-      Object {
-        "flex": 1,
-        "paddingRight": 20,
-        "width": "50%",
-      },
-      Object {
-        "paddingLeft": 0,
-      },
-    ]
+    Object {
+      "marginBottom": 20,
+      "paddingRight": 20,
+      "width": "50%",
+    }
   }
 >
   <View

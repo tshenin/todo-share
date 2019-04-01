@@ -1,0 +1,123 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Render AddBoardForm 1`] = `
+<View
+  style={
+    Object {
+      "flex": 1,
+      "padding": 20,
+      "paddingLeft": 40,
+    }
+  }
+>
+  <View
+    style={
+      Object {
+        "marginBottom": 20,
+      }
+    }
+  >
+    <Text
+      style={
+        Object {
+          "color": "rgba(0, 0, 0, 0.6)",
+        }
+      }
+    >
+      Title
+    </Text>
+    <TextInput
+      allowFontScaling={true}
+      maxLength={40}
+      onChangeText={[Function]}
+      style={
+        Object {
+          "borderBottomColor": "#5e1c73",
+          "borderBottomWidth": 1,
+          "fontSize": 24,
+          "paddingBottom": 10,
+          "paddingRight": 10,
+          "paddingTop": 10,
+        }
+      }
+      underlineColorAndroid="transparent"
+      value=""
+    />
+  </View>
+  <View
+    style={
+      Object {
+        "marginBottom": 20,
+      }
+    }
+  >
+    <Text
+      style={
+        Object {
+          "color": "rgba(0, 0, 0, 0.6)",
+        }
+      }
+    >
+      Description
+    </Text>
+    <TextInput
+      allowFontScaling={true}
+      multiline={true}
+      numberOfLines={4}
+      onChangeText={[Function]}
+      style={
+        Object {
+          "borderBottomColor": "#5e1c73",
+          "borderBottomWidth": 1,
+          "fontSize": 24,
+          "paddingBottom": 10,
+          "paddingRight": 10,
+          "paddingTop": 10,
+        }
+      }
+      underlineColorAndroid="transparent"
+      value=""
+    />
+  </View>
+  <View
+    accessibilityRole="button"
+    accessibilityStates={Array []}
+    accessible={true}
+    isTVSelectable={true}
+    onResponderGrant={[Function]}
+    onResponderMove={[Function]}
+    onResponderRelease={[Function]}
+    onResponderTerminate={[Function]}
+    onResponderTerminationRequest={[Function]}
+    onStartShouldSetResponder={[Function]}
+    style={
+      Object {
+        "opacity": 1,
+      }
+    }
+  >
+    <View
+      style={
+        Array [
+          Object {},
+        ]
+      }
+    >
+      <Text
+        style={
+          Array [
+            Object {
+              "color": "#007AFF",
+              "fontSize": 18,
+              "padding": 8,
+              "textAlign": "center",
+            },
+          ]
+        }
+      >
+        Add
+      </Text>
+    </View>
+  </View>
+</View>
+`;

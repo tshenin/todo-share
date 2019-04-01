@@ -6,22 +6,19 @@ exports[`Render BoardList 1`] = `
     Object {
       "flex": 1,
       "flexDirection": "row",
+      "flexWrap": "wrap",
+      "paddingLeft": 40,
       "paddingTop": 20,
     }
   }
 >
   <View
     style={
-      Array [
-        Object {
-          "flex": 1,
-          "paddingRight": 20,
-          "width": "50%",
-        },
-        Object {
-          "paddingLeft": 40,
-        },
-      ]
+      Object {
+        "marginBottom": 20,
+        "paddingRight": 20,
+        "width": "50%",
+      }
     }
   >
     <View
@@ -77,16 +74,11 @@ exports[`Render BoardList 1`] = `
   </View>
   <View
     style={
-      Array [
-        Object {
-          "flex": 1,
-          "paddingRight": 20,
-          "width": "50%",
-        },
-        Object {
-          "paddingLeft": 0,
-        },
-      ]
+      Object {
+        "marginBottom": 20,
+        "paddingRight": 20,
+        "width": "50%",
+      }
     }
   >
     <View
