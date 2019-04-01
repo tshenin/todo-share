@@ -51,6 +51,6 @@ const styles = StyleSheet.create({
     },
     desc: {
         fontWeight: '200',
-        color: 'rgba(255, 255, 255, 0.8)'
+        color: colors.textLight,
     }
 });
