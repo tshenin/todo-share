@@ -16,3 +16,5 @@ yarn start
 - use environment variables to provide different api addresses and so on
 - add ability to add image on background of board
 - add refresh param to NavigationEvents => onDidFocus
+- move inputs in separated component
+- move add board button in separated component
