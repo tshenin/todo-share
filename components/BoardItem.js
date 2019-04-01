@@ -1,5 +1,6 @@
 import React from 'react';
 import { TouchableHighlight, Text, StyleSheet, View } from 'react-native';
+import { colors } from '../services/consts';
 
 export const BoardItem = (props) => {
     const { board, navigation } = props;
@@ -38,7 +39,7 @@ const styles = StyleSheet.create({
     },
     item: {
         flex: 1,
-        backgroundColor: '#5e1c73',
+        backgroundColor: colors.main,
         padding: 20,
         borderRadius: 20,
     },

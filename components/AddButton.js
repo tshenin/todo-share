@@ -1,6 +1,7 @@
 import React from 'react';
 import { View, StyleSheet, TouchableHighlight } from 'react-native';
 import { Ionicons } from '@expo/vector-icons';
+import { colors } from '../services/consts';
 
 export const AddButton = props => {
     const { onPress } = props;
@@ -30,7 +31,7 @@ const styles = StyleSheet.create({
         borderRadius: 20,
     },
     button: {
-        backgroundColor: '#fa6c35',
+        backgroundColor: colors.additional,
         paddingTop: 10,
         paddingBottom: 10,
         paddingRight: 20,

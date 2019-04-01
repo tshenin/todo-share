@@ -7,6 +7,7 @@ import {
     Text
 } from 'react-native';
 import { addBoard } from '../services/Api';
+import { colors } from '../services/consts';
 
 export class AddBoardForm extends React.Component {
     constructor(props) {
@@ -72,11 +73,11 @@ const styles = StyleSheet.create({
         paddingTop: 10,
         paddingRight: 10,
         paddingBottom: 10,
-        borderBottomColor: '#5e1c73',
+        borderBottomColor: colors.main,
         borderBottomWidth: 1,
         fontSize: 24,
     },
     label: {
-        color: 'rgba(0, 0, 0, 0.6)'
+        color: colors.textDark,
     }
 });
