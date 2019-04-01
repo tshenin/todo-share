@@ -1,5 +1,5 @@
 import React from 'react';
-import { ScrollView, Text, StyleSheet } from 'react-native';
+import { ScrollView, StyleSheet } from 'react-native';
 import { getTodosByBoard } from '../services/Api';
 import { Header } from '../components/Header';
 import { TodoList } from '../components/TodoList';

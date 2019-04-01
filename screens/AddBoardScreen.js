@@ -5,9 +5,7 @@ import { AddBoardForm } from '../components/AddBoardForm';
 import { Header } from '../components/Header';
 
 export const AddBoardScreen = props => {
-
     const { navigation } = props;
-
     return (
         <View style={styles.wrapper}>
             <ScrollView style={styles.container}>

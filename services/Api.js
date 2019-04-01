@@ -17,3 +17,12 @@ export const getTodosByBoard = async id => {
         throw (e);
     }
 };
+
+export const addBoard = async data => {
+    try {
+        const response = await request('POST', 'boards', data);
+        return response.data.data;
+    } catch (e) {
+        throw (e);
+    }
+};

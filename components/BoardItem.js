@@ -1,11 +1,8 @@
 import React from 'react';
 import { TouchableHighlight, Text, StyleSheet, View } from 'react-native';
 
-const isEven = i => i % 2 === 0;
-const getLeftPadding = i => isEven(i) ? 40 : 0;
-
 export const BoardItem = (props) => {
-    const { board, index, navigation } = props;
+    const { board, navigation } = props;
     const onPress = () => {
         navigation.navigate('Todos', {
             boardId: board.id,
@@ -14,9 +11,7 @@ export const BoardItem = (props) => {
     };
 
     return (
-        <View style={[styles.wrapper, {
-            paddingLeft: getLeftPadding(index)
-        }]}>
+        <View style={styles.wrapper}>
             <TouchableHighlight
                 style={styles.underlay}
                 underlayColor="black"
@@ -33,9 +28,9 @@ export const BoardItem = (props) => {
 
 const styles = StyleSheet.create({
     wrapper: {
-        flex: 1,
         width: '50%',
         paddingRight: 20,
+        marginBottom: 20,
     },
     underlay: {
         minHeight: 250,
