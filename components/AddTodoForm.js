@@ -6,10 +6,10 @@ import {
     StyleSheet,
     Text
 } from 'react-native';
-import { addBoard } from '../services/Api';
+import { addTodo } from '../services/Api';
 import { colors } from '../services/consts';
 
-export class AddBoardForm extends React.Component {
+export class AddTodoForm extends React.Component {
     constructor(props) {
         super(props);
         this.state = {
@@ -19,10 +19,13 @@ export class AddBoardForm extends React.Component {
     }
 
     submitForm = async () => {
-        const { navigation } = this.props;
-        const data = { ...this.state };
+        const { navigation, boardId } = this.props;
+        const data = {
+            board_id: boardId,
+            ...this.state
+        };
         try {
-            await addBoard(data);
+            await addTodo(data);
             navigation.goBack();
         } catch (e) {
             console.error(e);

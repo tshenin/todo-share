@@ -26,3 +26,12 @@ export const addBoard = async data => {
         throw (e);
     }
 };
+
+export const addTodo = async data => {
+    try {
+        const response = await request('POST', 'todos', data);
+        return response.data.data;
+    } catch (e) {
+        console.error(e);
+    }
+};

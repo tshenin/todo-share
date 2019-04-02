@@ -30,7 +30,7 @@ export class BoardsScreen extends React.Component {
         const { boards } = this.state;
 
         return (
-            <View style={styles.wrapper}>
+            <View style={styles.container}>
                 <ScrollView style={styles.container}>
                     <BoardList
                         boards={boards}
@@ -52,9 +52,6 @@ BoardsScreen.navigationOptions = () => {
 }
 
 const styles = StyleSheet.create({
-    wrapper: {
-        flex: 1,
-    },
     container: {
         flex: 1,
     },

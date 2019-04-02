@@ -1,8 +1,10 @@
 import React from 'react';
-import { ScrollView, StyleSheet } from 'react-native';
+import { ScrollView, StyleSheet, View } from 'react-native';
+
 import { getTodosByBoard } from '../services/Api';
 import { Header } from '../components/Header';
 import { TodoList } from '../components/TodoList';
+import { AddButton } from '../components/AddButton';
 
 export class TodosScreen extends React.Component {
     constructor(props) {
@@ -18,16 +20,24 @@ export class TodosScreen extends React.Component {
         this.setState({ todos });
     }
 
+    goToAddTodo = () => {
+        const boardId = this.props.navigation.getParam('boardId');
+        this.props.navigation.navigate('AddTodo', { boardId });
+    }
+
     render() {
         const { todos } = this.state;
         const { navigation } = this.props;
         return (
-            <ScrollView style={styles.container}>
-                <TodoList
-                    todos={todos}
-                    navigation={navigation}
-                />
-            </ScrollView>
+            <View style={styles.container}>
+                <ScrollView style={styles.container}>
+                    <TodoList
+                        todos={todos}
+                        navigation={navigation}
+                    />
+                </ScrollView>
+                <AddButton onPress={this.goToAddTodo} />
+            </View>
         );
     }
 }
@@ -43,7 +53,5 @@ TodosScreen.navigationOptions = (props) => {
 const styles = StyleSheet.create({
     container: {
         flex: 1,
-        paddingTop: 15,
-        backgroundColor: '#fff',
     }
 })

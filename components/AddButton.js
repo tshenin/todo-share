@@ -7,19 +7,13 @@ export const AddButton = props => {
     const { onPress } = props;
 
     return (
-        <TouchableHighlight
-            onPress={onPress}
+        <Ionicons
             style={styles.wrapper}
-            underlayColor="black"
-        >
-            <View style={styles.button}>
-                <Ionicons
-                    name="ios-add"
-                    size={40}
-                    color="white"
-                />
-            </View>
-        </TouchableHighlight>
+            onPress={onPress}
+            name="ios-add-circle"
+            size={48}
+            color={colors.additional}
+        />
     );
 };
 
@@ -28,14 +22,5 @@ const styles = StyleSheet.create({
         position: 'absolute',
         right: 40,
         bottom: 40,
-        borderRadius: 20,
-    },
-    button: {
-        backgroundColor: colors.additional,
-        paddingTop: 10,
-        paddingBottom: 10,
-        paddingRight: 20,
-        paddingLeft: 20,
-        borderRadius: 20,
     }
 });
