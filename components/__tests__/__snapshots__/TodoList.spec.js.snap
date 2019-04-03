@@ -5,6 +5,7 @@ exports[`Render TodoList 1`] = `
   style={
     Object {
       "flex": 1,
+      "paddingTop": 15,
     }
   }
 >
