@@ -1,0 +1,27 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Render LabeledInput 1`] = `
+<View>
+  <Text
+    style={
+      Object {
+        "color": "rgba(0, 0, 0, 0.6)",
+      }
+    }
+  />
+  <TextInput
+    allowFontScaling={true}
+    style={
+      Object {
+        "borderBottomColor": "#5e1c73",
+        "borderBottomWidth": 1,
+        "fontSize": 24,
+        "paddingBottom": 10,
+        "paddingRight": 10,
+        "paddingTop": 10,
+      }
+    }
+    underlineColorAndroid="transparent"
+  />
+</View>
+`;

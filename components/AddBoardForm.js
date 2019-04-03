@@ -6,8 +6,10 @@ import {
     StyleSheet,
     Text
 } from 'react-native';
+
 import { addBoard } from '../services/Api';
 import { colors } from '../services/consts';
+import { LabeledInput } from './LabeledInput';
 
 export class AddBoardForm extends React.Component {
     constructor(props) {
@@ -33,18 +35,16 @@ export class AddBoardForm extends React.Component {
         return (
             <View style={styles.container}>
                 <View style={styles.fieldset}>
-                    <Text style={styles.label}>Title</Text>
-                    <TextInput
-                        style={styles.input}
+                    <LabeledInput
+                        label='Title'
                         value={this.state.title}
                         onChangeText={title => this.setState({ title })}
                         maxLength={40}
                     />
                 </View>
                 <View style={styles.fieldset}>
-                    <Text style={styles.label}>Description</Text>
-                    <TextInput
-                        style={styles.input}
+                    <LabeledInput
+                        label='Description'
                         multiline={true}
                         numberOfLines={4}
                         value={this.state.desc}

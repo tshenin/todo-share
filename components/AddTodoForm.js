@@ -6,8 +6,10 @@ import {
     StyleSheet,
     Text
 } from 'react-native';
+
 import { addTodo } from '../services/Api';
 import { colors } from '../services/consts';
+import { LabeledInput } from './LabeledInput';
 
 export class AddTodoForm extends React.Component {
     constructor(props) {
@@ -36,18 +38,16 @@ export class AddTodoForm extends React.Component {
         return (
             <View style={styles.container}>
                 <View style={styles.fieldset}>
-                    <Text style={styles.label}>Title</Text>
-                    <TextInput
-                        style={styles.input}
+                    <LabeledInput
+                        label='Title'
                         value={this.state.title}
                         onChangeText={title => this.setState({ title })}
                         maxLength={40}
                     />
                 </View>
                 <View style={styles.fieldset}>
-                    <Text style={styles.label}>Description</Text>
-                    <TextInput
-                        style={styles.input}
+                    <LabeledInput
+                        label='Description'
                         multiline={true}
                         numberOfLines={4}
                         value={this.state.desc}
@@ -72,15 +72,4 @@ const styles = StyleSheet.create({
     fieldset: {
         marginBottom: 20
     },
-    input: {
-        paddingTop: 10,
-        paddingRight: 10,
-        paddingBottom: 10,
-        borderBottomColor: colors.main,
-        borderBottomWidth: 1,
-        fontSize: 24,
-    },
-    label: {
-        color: colors.textDark,
-    }
 });
