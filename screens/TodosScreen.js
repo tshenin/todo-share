@@ -20,14 +20,10 @@ export class TodosScreen extends React.Component {
         this.setState({ todos });
     }
 
-    goToAddTodo = () => {
-        const boardId = this.props.navigation.getParam('boardId');
-        this.props.navigation.navigate('AddTodo', { boardId });
-    }
-
     render() {
         const { todos } = this.state;
         const { navigation } = this.props;
+        const boardId = this.props.navigation.getParam('boardId');
         return (
             <View style={styles.container}>
                 <ScrollView style={styles.container}>
@@ -36,8 +32,10 @@ export class TodosScreen extends React.Component {
                         navigation={navigation}
                     />
                 </ScrollView>
-                {/* <AddButton onPress={this.goToAddTodo} /> */}
-                <BoardFooter navigation={navigation} />
+                <BoardFooter
+                    navigation={navigation}
+                    boardId={boardId}
+                />
             </View>
         );
     }
@@ -54,5 +52,5 @@ TodosScreen.navigationOptions = (props) => {
 const styles = StyleSheet.create({
     container: {
         flex: 1,
-    }
+    },
 })

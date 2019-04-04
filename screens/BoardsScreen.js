@@ -37,8 +37,7 @@ export class BoardsScreen extends React.Component {
                         navigation={navigation}
                     />
                 </ScrollView>
-                <BoardsFooter navigation={navigation}/>
-                {/* <AddButton onPress={this.goToAddBoard} /> */}
+                <BoardsFooter navigation={navigation} />
             </View>
         );
     }
@@ -55,5 +54,5 @@ BoardsScreen.navigationOptions = () => {
 const styles = StyleSheet.create({
     container: {
         flex: 1,
-    },
+    }
 })

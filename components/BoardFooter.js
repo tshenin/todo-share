@@ -5,25 +5,26 @@ import { Footer } from './Footer';
 import { LabeledIcon } from './LabeledIcon';
 
 export const BoardFooter = props => {
-    const { navigation } = props;
+    const { navigation, boardId } = props;
+    const goToAddTodo = () => navigation.navigate('AddTodo', { boardId });
 
     return (
         <Footer>
-            <View style={[styles.container, styles.iconWrapper]}>
+            <View style={styles.iconWrapper}>
                 <LabeledIcon
                     label="Delete"
                     name="trash"
-                    onPress={() => {}}
+                    onPress={() => { }}
                 />
                 <LabeledIcon
                     label="Share"
                     name="share-apple"
-                    onPress={() => {}}
+                    onPress={() => { }}
                 />
                 <LabeledIcon
-                    label="Share"
+                    label="Add todo"
                     name="plus"
-                    onPress={() => {}}
+                    onPress={goToAddTodo}
                 />
             </View>
         </Footer>
@@ -31,11 +32,9 @@ export const BoardFooter = props => {
 };
 
 const styles = StyleSheet.create({
-    container: {
-        flex: 1,
-    },
     iconWrapper: {
+        flex: 1,
         flexDirection: 'row',
-        justifyContent: 'space-evenly'
+        justifyContent: 'space-evenly',
     }
 });

@@ -6,14 +6,15 @@ import { Footer } from './Footer';
 
 export const BoardsFooter = props => {
     const { navigation } = props;
+    const goToAddBoard = () => navigation.navigate('AddBoard');
 
     return (
         <Footer>
-            <View style={[styles.container, styles.iconWrapper]}>
+            <View style={styles.iconWrapper}>
                 <LabeledIcon
                     label="Add board"
                     name="plus"
-                    onPress={() => {}}
+                    onPress={goToAddBoard}
                 />
             </View>
         </Footer>
@@ -21,12 +22,9 @@ export const BoardsFooter = props => {
 };
 
 const styles = StyleSheet.create({
-    container: {
-        flex: 1,
-    },
     iconWrapper: {
+        flex: 1,
         flexDirection: 'row',
-        justifyContent: 'space-around',
-        alignItems: 'center'
+        justifyContent: 'space-evenly',
     }
 });

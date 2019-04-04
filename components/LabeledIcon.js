@@ -12,30 +12,31 @@ export const LabeledIcon = props => {
             style={styles.labeledIcon}
             underlayColor="rgba(255, 255, 255, 0)"
         >
-            <View style={styles.wrapper}>
+            <View>
                 <EvilIcons
+                    style={styles.icon}
                     name={name}
                     size={36}
                     color={colors.additional}
                 />
-                <Text style={styles.iconText}>{label}</Text>
+                <Text style={styles.text}>{label}</Text>
             </View>
-            
         </TouchableHighlight>
     );
 };
 
 const styles = StyleSheet.create({
-    wrapper: {
-        flex: 1,
-        alignContent: 'center',
-        alignItems: 'center',
-    },
     labeledIcon: {
         flex: 1,
+        justifyContent: 'center',
+        alignItems: 'center',
     },
-    iconText: {
+    icon: {
+        alignSelf: 'center',
+    },
+    text: {
         fontSize: 12,
-        color: colors.textDark
+        color: colors.textDark,
+        textAlign: 'center'
     }
 });
