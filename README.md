@@ -18,3 +18,4 @@ yarn start
 - add refresh param to NavigationEvents => onDidFocus
 - add fieldset HOC
 - add travis
+- add forms validation

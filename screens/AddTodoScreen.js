@@ -20,7 +20,7 @@ export const AddTodoScreen = props => {
 };
 
 AddTodoScreen.navigationOptions = () => {
-    const title = 'Add Todo';
+    const title = 'New Todo';
     return {
         title,
         header: () => <Header title={title}></Header>,

@@ -10,6 +10,7 @@ import {
 import { addTodo } from '../services/Api';
 import { colors } from '../services/consts';
 import { LabeledInput } from './LabeledInput';
+import { CustomButton } from './CustomButton';
 
 export class AddTodoForm extends React.Component {
     constructor(props) {
@@ -54,10 +55,12 @@ export class AddTodoForm extends React.Component {
                         onChangeText={desc => this.setState({ desc })}
                     />
                 </View>
-                <Button
-                    title={'Add'}
-                    onPress={this.submitForm}
-                />
+                <View style={styles.fieldset}>
+                    <CustomButton
+                        title={'Add Todo'}
+                        onPress={this.submitForm}
+                    />
+                </View>
             </View>
         );
     }
