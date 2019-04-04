@@ -4,7 +4,7 @@ import { ScrollView, StyleSheet, View } from 'react-native';
 import { getTodosByBoard } from '../services/Api';
 import { Header } from '../components/Header';
 import { TodoList } from '../components/TodoList';
-import { AddButton } from '../components/AddButton';
+import { BoardFooter } from '../components/BoardFooter';
 
 export class TodosScreen extends React.Component {
     constructor(props) {
@@ -36,7 +36,8 @@ export class TodosScreen extends React.Component {
                         navigation={navigation}
                     />
                 </ScrollView>
-                <AddButton onPress={this.goToAddTodo} />
+                {/* <AddButton onPress={this.goToAddTodo} /> */}
+                <BoardFooter navigation={navigation} />
             </View>
         );
     }

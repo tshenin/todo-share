@@ -4,7 +4,7 @@ import { StyleSheet, ScrollView, View } from 'react-native';
 import { getBoards } from '../services/Api';
 import { BoardList } from '../components/BoardList';
 import { Header } from '../components/Header';
-import { AddButton } from '../components/AddButton';
+import { BoardsFooter } from '../components/BoardsFooter';
 
 export class BoardsScreen extends React.Component {
     constructor(props) {
@@ -37,7 +37,8 @@ export class BoardsScreen extends React.Component {
                         navigation={navigation}
                     />
                 </ScrollView>
-                <AddButton onPress={this.goToAddBoard} />
+                <BoardsFooter navigation={navigation}/>
+                {/* <AddButton onPress={this.goToAddBoard} /> */}
             </View>
         );
     }

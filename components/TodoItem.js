@@ -31,7 +31,7 @@ const styles = StyleSheet.create({
     item: {
         flex: 1,
         borderBottomWidth: 1,
-        borderBottomColor: 'rgba(0, 0, 0, 0.1)',
+        borderBottomColor: colors.border,
         paddingBottom: 10,
     },
     title: {
