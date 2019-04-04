@@ -14,7 +14,7 @@ export const Header = props => {
 const styles = StyleSheet.create({
     container: {
         backgroundColor: 'white',
-        paddingTop: 80,
+        paddingTop: 64,
         paddingLeft: 40,
         paddingRight: 20,
     },

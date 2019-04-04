@@ -42,7 +42,7 @@ exports[`Render BoardsItem 1`] = `
             "color": "white",
             "fontSize": 24,
             "fontWeight": "300",
-            "lineHeight": 36,
+            "paddingBottom": 10,
           }
         }
       >

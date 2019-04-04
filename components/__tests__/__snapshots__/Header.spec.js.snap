@@ -7,7 +7,7 @@ exports[`Render Header with title 1`] = `
       "backgroundColor": "white",
       "paddingLeft": 40,
       "paddingRight": 20,
-      "paddingTop": 80,
+      "paddingTop": 64,
     }
   }
 >

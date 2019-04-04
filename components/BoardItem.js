@@ -47,7 +47,7 @@ const styles = StyleSheet.create({
         color: 'white',
         fontSize: 24,
         fontWeight: '300',
-        lineHeight: 36,
+        paddingBottom: 10
     },
     desc: {
         fontWeight: '200',
