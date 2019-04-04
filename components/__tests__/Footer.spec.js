@@ -1,11 +1,14 @@
 import 'react-native';
 import React from 'react';
-import { AddButton } from '../AddButton';
+import { Text } from 'react-native';
+import { Footer } from '../Footer';
 import renderer from 'react-test-renderer';
 
-it('Render AddButton', async () => {
+it('Render Footer', async () => {
     const tree = renderer.create(
-        <AddButton />
+        <Footer>
+            <Text>Test</Text>
+        </Footer>
     ).toJSON();
     expect(tree).toMatchSnapshot();
 });

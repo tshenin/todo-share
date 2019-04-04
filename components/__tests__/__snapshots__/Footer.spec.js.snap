@@ -1,0 +1,24 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Render Footer 1`] = `
+<View
+  style={
+    Object {
+      "backgroundColor": "white",
+      "borderTopColor": "rgba(0, 0, 0, 0.1)",
+      "borderTopWidth": 1,
+      "bottom": 0,
+      "flex": 1,
+      "height": 84,
+      "left": 0,
+      "paddingBottom": 20,
+      "position": "absolute",
+      "right": 0,
+    }
+  }
+>
+  <Text>
+    Test
+  </Text>
+</View>
+`;

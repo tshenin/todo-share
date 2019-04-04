@@ -1,0 +1,38 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Render LabeledIcon 1`] = `
+<View
+  accessible={true}
+  isTVSelectable={true}
+  onResponderGrant={[Function]}
+  onResponderMove={[Function]}
+  onResponderRelease={[Function]}
+  onResponderTerminate={[Function]}
+  onResponderTerminationRequest={[Function]}
+  onStartShouldSetResponder={[Function]}
+  style={
+    Object {
+      "alignItems": "center",
+      "flex": 1,
+      "justifyContent": "center",
+    }
+  }
+>
+  <View
+    style={null}
+  >
+    <Text />
+    <Text
+      style={
+        Object {
+          "color": "rgba(0, 0, 0, 0.6)",
+          "fontSize": 12,
+          "textAlign": "center",
+        }
+      }
+    >
+      Test
+    </Text>
+  </View>
+</View>
+`;

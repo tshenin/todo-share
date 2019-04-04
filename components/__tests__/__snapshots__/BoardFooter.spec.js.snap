@@ -1,0 +1,133 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Render BoardFooter 1`] = `
+<View
+  style={
+    Object {
+      "backgroundColor": "white",
+      "borderTopColor": "rgba(0, 0, 0, 0.1)",
+      "borderTopWidth": 1,
+      "bottom": 0,
+      "flex": 1,
+      "height": 84,
+      "left": 0,
+      "paddingBottom": 20,
+      "position": "absolute",
+      "right": 0,
+    }
+  }
+>
+  <View
+    style={
+      Object {
+        "flex": 1,
+        "flexDirection": "row",
+        "justifyContent": "space-evenly",
+      }
+    }
+  >
+    <View
+      accessible={true}
+      isTVSelectable={true}
+      onResponderGrant={[Function]}
+      onResponderMove={[Function]}
+      onResponderRelease={[Function]}
+      onResponderTerminate={[Function]}
+      onResponderTerminationRequest={[Function]}
+      onStartShouldSetResponder={[Function]}
+      style={
+        Object {
+          "alignItems": "center",
+          "flex": 1,
+          "justifyContent": "center",
+        }
+      }
+    >
+      <View
+        style={null}
+      >
+        <Text />
+        <Text
+          style={
+            Object {
+              "color": "rgba(0, 0, 0, 0.6)",
+              "fontSize": 12,
+              "textAlign": "center",
+            }
+          }
+        >
+          Delete
+        </Text>
+      </View>
+    </View>
+    <View
+      accessible={true}
+      isTVSelectable={true}
+      onResponderGrant={[Function]}
+      onResponderMove={[Function]}
+      onResponderRelease={[Function]}
+      onResponderTerminate={[Function]}
+      onResponderTerminationRequest={[Function]}
+      onStartShouldSetResponder={[Function]}
+      style={
+        Object {
+          "alignItems": "center",
+          "flex": 1,
+          "justifyContent": "center",
+        }
+      }
+    >
+      <View
+        style={null}
+      >
+        <Text />
+        <Text
+          style={
+            Object {
+              "color": "rgba(0, 0, 0, 0.6)",
+              "fontSize": 12,
+              "textAlign": "center",
+            }
+          }
+        >
+          Share
+        </Text>
+      </View>
+    </View>
+    <View
+      accessible={true}
+      isTVSelectable={true}
+      onResponderGrant={[Function]}
+      onResponderMove={[Function]}
+      onResponderRelease={[Function]}
+      onResponderTerminate={[Function]}
+      onResponderTerminationRequest={[Function]}
+      onStartShouldSetResponder={[Function]}
+      style={
+        Object {
+          "alignItems": "center",
+          "flex": 1,
+          "justifyContent": "center",
+        }
+      }
+    >
+      <View
+        style={null}
+      >
+        <Text />
+        <Text
+          style={
+            Object {
+              "color": "rgba(0, 0, 0, 0.6)",
+              "fontSize": 12,
+              "textAlign": "center",
+            }
+          }
+        >
+          Add todo
+        </Text>
+      </View>
+    </View>
+  </View>
+</View>
+`;
