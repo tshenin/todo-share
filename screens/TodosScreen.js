@@ -24,6 +24,8 @@ export class TodosScreen extends React.Component {
         const { todos } = this.state;
         const { navigation } = this.props;
         const boardId = this.props.navigation.getParam('boardId');
+        const title = this.props.navigation.getParam('boardTitle');
+
         return (
             <View style={styles.container}>
                 <ScrollView style={styles.container}>
@@ -35,6 +37,7 @@ export class TodosScreen extends React.Component {
                 <BoardFooter
                     navigation={navigation}
                     boardId={boardId}
+                    boardTitle={title}
                 />
             </View>
         );
