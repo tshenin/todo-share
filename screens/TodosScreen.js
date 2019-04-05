@@ -1,7 +1,7 @@
 import React from 'react';
 import { ScrollView, StyleSheet, View } from 'react-native';
 
-import { getTodosByBoard } from '../services/Api';
+import { getTodosByBoard } from '../services/Todos';
 import { Header } from '../components/Header';
 import { TodoList } from '../components/TodoList';
 import { BoardFooter } from '../components/BoardFooter';

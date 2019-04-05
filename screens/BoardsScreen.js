@@ -1,7 +1,7 @@
 import React from 'react';
 import { StyleSheet, ScrollView, View } from 'react-native';
 
-import { getBoards } from '../services/Api';
+import { getBoards } from '../services/Boards';
 import { BoardList } from '../components/BoardList';
 import { Header } from '../components/Header';
 import { BoardsFooter } from '../components/BoardsFooter';

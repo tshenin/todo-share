@@ -1,7 +1,7 @@
 import React from 'react';
 import { View, StyleSheet } from 'react-native';
 
-import { addBoard } from '../services/Api';
+import { addBoard } from '../services/Boards';
 import { colors } from '../services/consts';
 import { LabeledInput } from './LabeledInput';
 import { CustomButton } from './CustomButton';

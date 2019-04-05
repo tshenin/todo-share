@@ -3,7 +3,7 @@ import { StyleSheet, View, AlertIOS } from 'react-native';
 
 import { Footer } from './Footer';
 import { LabeledIcon } from './LabeledIcon';
-import { deleteBoard } from '../services/Api';
+import { deleteBoard } from '../services/Boards';
 
 export const BoardFooter = props => {
     const { navigation, boardId, boardTitle } = props;

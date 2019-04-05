@@ -1,14 +1,10 @@
 import React from 'react';
 import {
-    TextInput,
     View,
-    Button,
     StyleSheet,
-    Text
 } from 'react-native';
 
-import { addTodo } from '../services/Api';
-import { colors } from '../services/consts';
+import { addTodo } from '../services/Todos';
 import { LabeledInput } from './LabeledInput';
 import { CustomButton } from './CustomButton';
 
