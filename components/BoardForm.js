@@ -1,18 +1,12 @@
 import React from 'react';
-import {
-    TextInput,
-    View,
-    Button,
-    StyleSheet,
-    Text
-} from 'react-native';
+import { View, StyleSheet } from 'react-native';
 
-import { addTodo } from '../services/Api';
+import { addBoard } from '../services/Api';
 import { colors } from '../services/consts';
 import { LabeledInput } from './LabeledInput';
 import { CustomButton } from './CustomButton';
 
-export class AddTodoForm extends React.Component {
+export class BoardForm extends React.Component {
     constructor(props) {
         super(props);
         this.state = {
@@ -22,13 +16,10 @@ export class AddTodoForm extends React.Component {
     }
 
     submitForm = async () => {
-        const { navigation, boardId } = this.props;
-        const data = {
-            board_id: boardId,
-            ...this.state
-        };
+        const { navigation } = this.props;
+        const data = { ...this.state };
         try {
-            await addTodo(data);
+            await addBoard(data);
             navigation.goBack();
         } catch (e) {
             console.error(e);
@@ -57,7 +48,7 @@ export class AddTodoForm extends React.Component {
                 </View>
                 <View style={styles.fieldset}>
                     <CustomButton
-                        title={'Add Todo'}
+                        title={'Add Board'}
                         onPress={this.submitForm}
                     />
                 </View>
@@ -75,4 +66,15 @@ const styles = StyleSheet.create({
     fieldset: {
         marginBottom: 20
     },
+    input: {
+        paddingTop: 10,
+        paddingRight: 10,
+        paddingBottom: 10,
+        borderBottomColor: colors.main,
+        borderBottomWidth: 1,
+        fontSize: 24,
+    },
+    label: {
+        color: colors.textDark,
+    }
 });

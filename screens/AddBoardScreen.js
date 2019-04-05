@@ -1,7 +1,7 @@
 import React from 'react';
 import { StyleSheet, ScrollView, View } from 'react-native';
 
-import { AddBoardForm } from '../components/AddBoardForm';
+import { BoardForm } from '../components/BoardForm';
 import { Header } from '../components/Header';
 
 export const AddBoardScreen = props => {
@@ -9,7 +9,7 @@ export const AddBoardScreen = props => {
     return (
         <View style={styles.wrapper}>
             <ScrollView style={styles.container}>
-                <AddBoardForm navigation={navigation} />
+                <BoardForm navigation={navigation} />
             </ScrollView>
         </View>
     );

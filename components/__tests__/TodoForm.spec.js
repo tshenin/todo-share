@@ -1,11 +1,11 @@
 import 'react-native';
 import React from 'react';
-import { AddTodoForm } from '../AddTodoForm';
+import { TodoForm } from '../TodoForm';
 import renderer from 'react-test-renderer';
 
-it('Render AddTododForm', async () => {
+it('Render TodoForm', async () => {
     const tree = renderer.create(
-        <AddTodoForm />
+        <TodoForm />
     ).toJSON();
     expect(tree).toMatchSnapshot();
 });

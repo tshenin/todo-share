@@ -1,7 +1,7 @@
 import React from 'react';
 import { StyleSheet, ScrollView, View } from 'react-native';
 
-import { AddTodoForm } from '../components/AddTodoForm';
+import { TodoForm } from '../components/TodoForm';
 import { Header } from '../components/Header';
 
 export const AddTodoScreen = props => {
@@ -10,7 +10,7 @@ export const AddTodoScreen = props => {
     return (
         <View style={styles.container}>
             <ScrollView style={styles.container}>
-                <AddTodoForm
+                <TodoForm
                     navigation={navigation}
                     boardId={boardId}
                 />
