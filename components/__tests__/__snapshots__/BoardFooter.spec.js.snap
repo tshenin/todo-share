@@ -90,6 +90,40 @@ exports[`Render BoardFooter 1`] = `
             }
           }
         >
+          Edit
+        </Text>
+      </View>
+    </View>
+    <View
+      accessible={true}
+      isTVSelectable={true}
+      onResponderGrant={[Function]}
+      onResponderMove={[Function]}
+      onResponderRelease={[Function]}
+      onResponderTerminate={[Function]}
+      onResponderTerminationRequest={[Function]}
+      onStartShouldSetResponder={[Function]}
+      style={
+        Object {
+          "alignItems": "center",
+          "flex": 1,
+          "justifyContent": "center",
+        }
+      }
+    >
+      <View
+        style={null}
+      >
+        <Text />
+        <Text
+          style={
+            Object {
+              "color": "rgba(0, 0, 0, 0.6)",
+              "fontSize": 12,
+              "textAlign": "center",
+            }
+          }
+        >
           Share
         </Text>
       </View>
