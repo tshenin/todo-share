@@ -22,3 +22,4 @@ yarn start
 - add forms validation
 - add screens tests
 - add api tests with mocks
+- add telegram bot for travis
