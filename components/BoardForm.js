@@ -1,25 +1,34 @@
-import React from 'react';
+import React, { Component } from 'react';
 import { View, StyleSheet } from 'react-native';
 
-import { addBoard } from '../services/Boards';
+import { addBoard, updateBoardById } from '../services/Boards';
 import { colors } from '../services/consts';
 import { LabeledInput } from './LabeledInput';
 import { CustomButton } from './CustomButton';
 
-export class BoardForm extends React.Component {
+export class BoardForm extends Component {
     constructor(props) {
         super(props);
+        const { board = {} } = this.props;
         this.state = {
-            title: '',
-            desc: ''
-        }
+            title: board.title,
+            desc: board.desc,
+        };
+    }
+
+    isUpdateMode = () => {
+        return !!(this.props.board && this.props.board.id);
     }
 
     submitForm = async () => {
-        const { navigation } = this.props;
+        const { navigation, board = null } = this.props;
         const data = { ...this.state };
         try {
-            await addBoard(data);
+            if (this.isUpdateMode()) {
+                await updateBoardById(board.id, data);
+            } else {
+                await addBoard(data);
+            }
             navigation.goBack();
         } catch (e) {
             console.error(e);
@@ -48,7 +57,9 @@ export class BoardForm extends React.Component {
                 </View>
                 <View style={styles.fieldset}>
                     <CustomButton
-                        title={'Add Board'}
+                        title={this.isUpdateMode()
+                            ? 'Update Board'
+                            : 'Add Board'}
                         onPress={this.submitForm}
                     />
                 </View>

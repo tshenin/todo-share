@@ -23,3 +23,4 @@ yarn start
 - add screens tests
 - add api tests with mocks
 - add telegram bot for travis
+- describe props types

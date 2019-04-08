@@ -8,6 +8,7 @@ import { deleteBoard } from '../services/Boards';
 export const BoardFooter = props => {
     const { navigation, boardId, boardTitle } = props;
     const goToAddTodo = () => navigation.navigate('AddTodo', { boardId });
+    const goToEditBoard = () => navigation.navigate('EditBoard', { boardId })
     const deleteCurrentBoard = async () => {
         await deleteBoard(boardId);
         navigation.navigate('Boards');
@@ -19,7 +20,7 @@ export const BoardFooter = props => {
             [
                 {
                     text: 'Cancel',
-                    onPress: () => {},
+                    onPress: () => { },
                     style: 'cancel',
                 },
                 {
@@ -37,6 +38,11 @@ export const BoardFooter = props => {
                     label="Delete"
                     name="trash"
                     onPress={showDeleteAlert}
+                />
+                <LabeledIcon
+                    label="Edit"
+                    name="pencil"
+                    onPress={goToEditBoard}
                 />
                 <LabeledIcon
                     label="Share"

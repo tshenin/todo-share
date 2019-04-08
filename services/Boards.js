@@ -9,6 +9,24 @@ export const getBoards = async () => {
     }
 };
 
+export const getBoardById = async id => {
+    try {
+        const response = await request('GET', `boards/${id}`);
+        return response.data.data[0];
+    } catch (e) {
+        console.error(e);
+    }
+};
+
+export const updateBoardById = async (id, data) => {
+    try {
+        const response = await request('PUT', `boards/${id}`, data);
+        return response.data.data[0];
+    } catch (e) {
+        console.error(e);
+    }
+};
+
 export const addBoard = async data => {
     try {
         const response = await request('POST', 'boards', data);
