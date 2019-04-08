@@ -1,3 +1,5 @@
+[![Build Status](https://travis-ci.com/timirila1/todo-share.svg?token=iDsBQL2CPrb6wqunpWN1&branch=master)](https://travis-ci.com/timirila1/todo-share)
+
 ### Pre
 ```
 yarn install
