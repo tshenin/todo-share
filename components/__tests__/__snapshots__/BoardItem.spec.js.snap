@@ -28,12 +28,16 @@ exports[`Render BoardsItem 1`] = `
   >
     <View
       style={
-        Object {
-          "backgroundColor": "#5e1c73",
-          "borderRadius": 20,
-          "flex": 1,
-          "padding": 20,
-        }
+        Array [
+          Object {
+            "backgroundColor": "#5e1c73",
+            "borderRadius": 20,
+            "flex": 1,
+            "padding": 20,
+          },
+          Object {},
+          Object {},
+        ]
       }
     >
       <Text
