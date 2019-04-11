@@ -4,9 +4,7 @@ import { colors } from '../services/consts';
 
 export const TodoItem = (props) => {
     const { todo, navigation } = props;
-    const onPress = () => {
-        console.log('Yep');
-    };
+    const onPress = () => {};
 
     return (
         <TouchableHighlight

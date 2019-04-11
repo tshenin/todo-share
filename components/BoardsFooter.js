@@ -11,7 +11,7 @@ export const BoardsFooter = props => {
     const goToEditBoard = () => navigation.navigate('EditBoard', { boardId: selected.id })
     const deleteCurrentBoard = async () => {
         await deleteBoard(selected.id);
-        navigation.navigate('Boards');
+        navigation.navigate('Boards', { refresh: true });
     };
     const showDeleteAlert = () => {
         AlertIOS.alert(

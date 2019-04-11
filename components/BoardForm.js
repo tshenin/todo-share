@@ -29,7 +29,7 @@ export class BoardForm extends Component {
             } else {
                 await addBoard(data);
             }
-            navigation.goBack();
+            navigation.navigate('Boards', { refresh: true });
         } catch (e) {
             console.error(e);
         }

@@ -1,10 +1,9 @@
 import React from 'react';
-import { StyleSheet, ScrollView, View } from 'react-native';
+import { StyleSheet, View } from 'react-native';
 
 import { getBoards } from '../services/Boards';
 import { BoardList } from '../components/BoardList';
 import { Header } from '../components/Header';
-import { BoardsFooter } from '../components/BoardsFooter';
 
 export class BoardsScreen extends React.Component {
     constructor(props) {
@@ -14,10 +13,19 @@ export class BoardsScreen extends React.Component {
         };
     }
 
-    async componentDidMount() {
+    updateBoards = async () => {
         const boards = await getBoards();
         this.setState({
             boards: [...boards]
+        });
+    }
+
+    componentDidMount() {
+        this.updateBoards();
+        this.props.navigation.addListener('willFocus', payload => {
+            if (payload.state.params) {
+                this.updateBoards();
+            }
         });
     }
 
