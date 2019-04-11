@@ -19,7 +19,6 @@ export class BoardList extends Component {
         return boards.map(b => (
             <BoardItem
                 board={b}
-                navigation={navigation}
                 onPress={() => this.goToTodos(b)}
                 onLongPress={() => this.selectBoard(b)}
                 blocked={selected && b.id !== selected.id}
@@ -58,7 +57,7 @@ export class BoardList extends Component {
 
         return (
             <View style={styles.container}>
-                <ScrollView style={[styles.container, styles.pb]}>
+                <ScrollView style={styles.container}>
                     <View style={[styles.container, styles.list]}>
                         {this.getBoardItems()}
                     </View>
