@@ -1,0 +1,38 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Render FloatButton 1`] = `
+<View
+  accessible={true}
+  isTVSelectable={true}
+  onResponderGrant={[Function]}
+  onResponderMove={[Function]}
+  onResponderRelease={[Function]}
+  onResponderTerminate={[Function]}
+  onResponderTerminationRequest={[Function]}
+  onStartShouldSetResponder={[Function]}
+  style={
+    Object {
+      "backgroundColor": "#fa6c35",
+      "borderRadius": 20,
+      "bottom": 20,
+      "opacity": 1,
+      "padding": 10,
+      "position": "absolute",
+      "right": 40,
+    }
+  }
+>
+  <Text />
+  <Text
+    style={
+      Object {
+        "color": "rgba(255, 255, 255, 0.8)",
+        "fontSize": 12,
+        "textAlign": "center",
+      }
+    }
+  >
+    Test
+  </Text>
+</View>
+`;
