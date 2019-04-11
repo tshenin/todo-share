@@ -3,13 +3,13 @@ import { TouchableHighlight, Text, StyleSheet, View } from 'react-native';
 import { colors } from '../services/consts';
 
 export const BoardItem = (props) => {
-    const { board, navigation } = props;
-    const onPress = () => {
-        navigation.navigate('Todos', {
-            boardId: board.id,
-            boardTitle: board.title
-        })
-    };
+    const {
+        board,
+        onPress,
+        onLongPress,
+        blocked,
+        selected
+    } = props;
 
     return (
         <View style={styles.wrapper}>
@@ -17,8 +17,13 @@ export const BoardItem = (props) => {
                 style={styles.underlay}
                 underlayColor="black"
                 onPress={onPress}
+                onLongPress={onLongPress}
             >
-                <View style={styles.item}>
+                <View style={[
+                    styles.item,
+                    selected ? styles.selected : {},
+                    blocked ? styles.blocked : {}
+                ]}>
                     <Text style={styles.title}>{board.title}</Text>
                     <Text style={styles.desc}>{board.desc}</Text>
                 </View>
@@ -42,6 +47,13 @@ const styles = StyleSheet.create({
         backgroundColor: colors.main,
         padding: 20,
         borderRadius: 20,
+    },
+    selected: {
+        borderWidth: 4,
+        borderColor: colors.additional,
+    },
+    blocked: {
+        opacity: 0.7,
     },
     title: {
         color: 'white',

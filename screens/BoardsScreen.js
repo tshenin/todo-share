@@ -21,23 +21,16 @@ export class BoardsScreen extends React.Component {
         });
     }
 
-    goToAddBoard = () => {
-        this.props.navigation.navigate('AddBoard');
-    }
-
     render() {
         const { navigation } = this.props;
         const { boards } = this.state;
 
         return (
             <View style={styles.container}>
-                <ScrollView style={styles.container}>
-                    <BoardList
-                        boards={boards}
-                        navigation={navigation}
-                    />
-                </ScrollView>
-                <BoardsFooter navigation={navigation} />
+                <BoardList
+                    boards={boards}
+                    navigation={navigation}
+                />
             </View>
         );
     }
