@@ -1,6 +1,6 @@
 import React from 'react';
 import { StyleSheet, View } from 'react-native';
-import { colors } from '../services/consts';
+import { colors, dims } from '../services/consts';
 
 export const Footer = props => {
     return (
@@ -15,7 +15,7 @@ const styles = StyleSheet.create({
         borderTopWidth: 1,
         borderTopColor: colors.border,
         position: 'absolute',
-        height: 84,
+        height: dims.footerHeight,
         flex: 1,
         left: 0,
         right: 0,

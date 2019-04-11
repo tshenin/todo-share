@@ -1,5 +1,11 @@
 import React from 'react';
-import { TouchableHighlight, Text, StyleSheet, View } from 'react-native';
+import {
+    TouchableHighlight,
+    Text,
+    StyleSheet,
+    View,
+    Animated,
+} from 'react-native';
 import { colors } from '../services/consts';
 
 export const BoardItem = (props) => {
@@ -11,6 +17,17 @@ export const BoardItem = (props) => {
         selected
     } = props;
 
+    const borderAppearing = new Animated.Value(0);
+    const opacityAnimation = new Animated.Value(1);
+
+    Animated
+        .timing(borderAppearing, { toValue: selected ? 4 : 0, duration: 50, })
+        .start();
+    
+    Animated
+        .timing(opacityAnimation, { toValue: blocked ? 0.7 : 1, duration: 50, })
+        .start();
+
     return (
         <View style={styles.wrapper}>
             <TouchableHighlight
@@ -19,14 +36,15 @@ export const BoardItem = (props) => {
                 onPress={onPress}
                 onLongPress={onLongPress}
             >
-                <View style={[
+                <Animated.View style={[
                     styles.item,
                     selected ? styles.selected : {},
-                    blocked ? styles.blocked : {}
+                    { opacity: opacityAnimation },
+                    { borderWidth: borderAppearing }
                 ]}>
                     <Text style={styles.title}>{board.title}</Text>
                     <Text style={styles.desc}>{board.desc}</Text>
-                </View>
+                </Animated.View>
             </TouchableHighlight>
         </View>
     );
@@ -49,11 +67,7 @@ const styles = StyleSheet.create({
         borderRadius: 20,
     },
     selected: {
-        borderWidth: 4,
         borderColor: colors.additional,
-    },
-    blocked: {
-        opacity: 0.7,
     },
     title: {
         color: 'white',
