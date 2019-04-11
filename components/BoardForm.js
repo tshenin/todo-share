@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import { View, StyleSheet } from 'react-native';
 
 import { addBoard, updateBoardById } from '../services/Boards';
-import { colors } from '../services/consts';
+import { colors, routes } from '../services/consts';
 import { LabeledInput } from './LabeledInput';
 import { CustomButton } from './CustomButton';
 
@@ -29,7 +29,7 @@ export class BoardForm extends Component {
             } else {
                 await addBoard(data);
             }
-            navigation.navigate('Boards', { refresh: true });
+            navigation.navigate(routes.Boards, { refresh: true });
         } catch (e) {
             console.error(e);
         }

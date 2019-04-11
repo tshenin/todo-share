@@ -4,6 +4,7 @@ import { View, StyleSheet, ScrollView } from 'react-native';
 import { BoardItem } from './BoardItem';
 import { BoardsFooter } from './BoardsFooter';
 import { FloatButton } from './FloatButton';
+import { routes } from '../services/consts';
 
 export class BoardList extends Component {
 
@@ -33,7 +34,7 @@ export class BoardList extends Component {
         const { selected } = this.state;
 
         if (!selected || board.id === selected.id) {
-            navigation.navigate('Todos', {
+            navigation.navigate(routes.Todos, {
                 boardId: board.id,
                 boardTitle: board.title
             });
@@ -48,7 +49,7 @@ export class BoardList extends Component {
     };
 
     goToAddBoard = () => {
-        this.props.navigation.navigate('AddBoard');
+        this.props.navigation.navigate(routes.AddBoard);
     }
 
     render() {

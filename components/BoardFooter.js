@@ -3,10 +3,11 @@ import { StyleSheet, View } from 'react-native';
 
 import { Footer } from './Footer';
 import { LabeledIcon } from './LabeledIcon';
+import { routes } from '../services/consts';
 
 export const BoardFooter = props => {
     const { navigation, boardId } = props;
-    const goToAddTodo = () => navigation.navigate('AddTodo', { boardId });
+    const goToAddTodo = () => navigation.navigate(routes.AddTodo, { boardId });
 
     return (
         <Footer>

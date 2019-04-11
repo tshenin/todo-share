@@ -9,3 +9,11 @@ export const colors = {
 export const dims = {
     footerHeight: 84,
 };
+
+export const routes = {
+    AddBoard: 'AddBoard',
+    AddTodo: 'AddTodo',
+    Boards: 'Boards',
+    EditBoard: 'EditBoard',
+    Todos: 'Todos',
+}

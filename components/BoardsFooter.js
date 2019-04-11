@@ -4,14 +4,15 @@ import { StyleSheet, View, AlertIOS } from 'react-native';
 import { deleteBoard } from '../services/Boards';
 import { LabeledIcon } from './LabeledIcon';
 import { Footer } from './Footer';
+import { routes } from '../services/consts';
 
 export const BoardsFooter = props => {
     const { navigation, selected } = props;
-    const goToAddBoard = () => navigation.navigate('AddBoard');
-    const goToEditBoard = () => navigation.navigate('EditBoard', { boardId: selected.id })
+    const goToAddBoard = () => navigation.navigate(routes.AddBoard);
+    const goToEditBoard = () => navigation.navigate(routes.EditBoard, { boardId: selected.id })
     const deleteCurrentBoard = async () => {
         await deleteBoard(selected.id);
-        navigation.navigate('Boards', { refresh: true });
+        navigation.navigate(routes.Boards, { refresh: true });
     };
     const showDeleteAlert = () => {
         AlertIOS.alert(
@@ -52,7 +53,7 @@ export const BoardsFooter = props => {
                     <LabeledIcon
                         label="Share"
                         name="share-apple"
-                        onPress={() => {}}
+                        onPress={() => { }}
                     />
                 }
                 {!selected &&

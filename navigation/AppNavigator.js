@@ -6,17 +6,18 @@ import { TodosScreen } from '../screens/TodosScreen';
 import { AddBoardScreen } from '../screens/AddBoardScreen';
 import { AddTodoScreen } from '../screens/AddTodoScreen';
 import { EditBoardScreen } from '../screens/EditBoardScreen';
+import { routes } from '../services/consts';
 
 const AppNavigator = createStackNavigator(
     {
-        Boards: BoardsScreen,
-        Todos: TodosScreen,
-        AddBoard: AddBoardScreen,
-        AddTodo: AddTodoScreen,
-        EditBoard: EditBoardScreen,
+        [routes.Boards]: BoardsScreen,
+        [routes.Todos]: TodosScreen,
+        [routes.AddBoard]: AddBoardScreen,
+        [routes.AddTodo]: AddTodoScreen,
+        [routes.EditBoard]: EditBoardScreen,
     },
     {
-        initialRouteName: 'Boards',
+        initialRouteName: routes.Boards,
         headerMode: 'screen'
     }
 );
