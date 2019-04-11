@@ -24,3 +24,4 @@ yarn start
 - add api tests with mocks
 - add telegram bot for travis
 - describe props types
+- upgrade to expo sdk-33 when it will release
