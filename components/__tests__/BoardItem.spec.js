@@ -3,6 +3,8 @@ import React from 'react';
 import { BoardItem } from '../BoardItem';
 import renderer from 'react-test-renderer';
 
+jest.useFakeTimers();
+
 it('Render BoardsItem', async () => {
     const boardMock = {
         id: 1,

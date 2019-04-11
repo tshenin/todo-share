@@ -8,9 +8,12 @@ exports[`Render LabeledInput 1`] = `
         "color": "rgba(0, 0, 0, 0.6)",
       }
     }
-  />
+  >
+    test
+  </Text>
   <TextInput
     allowFontScaling={true}
+    label="test"
     style={
       Object {
         "borderBottomColor": "#5e1c73",
