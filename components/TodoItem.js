@@ -3,7 +3,7 @@ import { TouchableHighlight, Text, StyleSheet, View } from 'react-native';
 import { colors } from '../services/consts';
 
 export const TodoItem = (props) => {
-    const { todo, navigation } = props;
+    const { todo } = props;
     const onPress = () => {};
 
     return (

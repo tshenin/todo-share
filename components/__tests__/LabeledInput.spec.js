@@ -5,7 +5,7 @@ import renderer from 'react-test-renderer';
 
 it('Render LabeledInput', async () => {
     const tree = renderer.create(
-        <LabeledInput />
+        <LabeledInput label="test" />
     ).toJSON();
     expect(tree).toMatchSnapshot();
 });

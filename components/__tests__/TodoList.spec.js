@@ -3,7 +3,6 @@ import React from 'react';
 import { TodoList } from '../TodoList';
 import renderer from 'react-test-renderer';
 
-
 it('Render TodoList', async () => {
     const todosMock = [{
         id: 1,
@@ -17,10 +16,7 @@ it('Render TodoList', async () => {
     }];
 
     const tree = renderer.create(
-        <TodoList
-            navigation={{}}
-            todos={todosMock}
-        />
+        <TodoList todos={todosMock} />
     ).toJSON();
     expect(tree).toMatchSnapshot();
 });

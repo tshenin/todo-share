@@ -1,6 +1,5 @@
 import React from 'react';
 import { StyleSheet, View, Text, TextInput } from 'react-native';
-import { Ionicons } from '@expo/vector-icons';
 import { colors } from '../services/consts';
 
 export const LabeledInput = props => {
@@ -14,7 +13,6 @@ export const LabeledInput = props => {
                 {...props}
             />
         </View>
-
     );
 };
 
