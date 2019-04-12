@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { View, StyleSheet } from 'react-native';
+import { View, StyleSheet, Text } from 'react-native';
 
 import { addBoard, updateBoardById } from '../services/Boards';
 import { colors, routes } from '../services/consts';
@@ -13,6 +13,7 @@ export class BoardForm extends Component {
         this.state = {
             title: board.title,
             desc: board.desc,
+            invalidTitle: false,
         };
     }
 
@@ -20,9 +21,22 @@ export class BoardForm extends Component {
         return !!(this.props.board && this.props.board.id);
     }
 
+    checkBoardValidity = data => {
+        if (!data.title) {
+            this.setState({ invalidTitle: true });
+            return false;
+        }
+        return true;
+    }
+
     submitForm = async () => {
         const { navigation, board = null } = this.props;
         const data = { ...this.state };
+
+        if (!this.checkBoardValidity(data)) {
+            return;
+        }
+
         try {
             if (this.isUpdateMode()) {
                 await updateBoardById(board.id, data);
@@ -36,15 +50,18 @@ export class BoardForm extends Component {
     }
 
     render() {
+        const { invalidTitle } = this.state;
+
         return (
             <View style={styles.container}>
                 <View style={styles.fieldset}>
                     <LabeledInput
                         label='Title'
                         value={this.state.title}
-                        onChangeText={title => this.setState({ title })}
+                        onChangeText={title => this.setState({ title, invalidTitle: false })}
                         maxLength={40}
                     />
+                    {invalidTitle && <Text style={styles.errorMessage}>Please enter Title</Text>}
                 </View>
                 <View style={styles.fieldset}>
                     <LabeledInput
@@ -87,5 +104,9 @@ const styles = StyleSheet.create({
     },
     label: {
         color: colors.textDark,
+    },
+    errorMessage: {
+        paddingTop: 5,
+        color: colors.danger
     }
 });

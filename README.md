@@ -24,3 +24,4 @@ yarn start
 - describe props types
 - upgrade to expo sdk-33 when it will release
 - update screen when delete board
+- send to new board after adding
