@@ -7,12 +7,10 @@ import { TodoList } from '../components/TodoList';
 import { BoardFooter } from '../components/BoardFooter';
 
 export class TodosScreen extends React.Component {
-    constructor(props) {
-        super(props);
-        this.state = {
-            todos: []
-        };
-    }
+    
+    state = {
+        todos: []
+    };
 
     async componentDidMount() {
         const boardId = this.props.navigation.getParam('boardId');
@@ -24,20 +22,14 @@ export class TodosScreen extends React.Component {
         const { todos } = this.state;
         const { navigation } = this.props;
         const boardId = this.props.navigation.getParam('boardId');
-        const title = this.props.navigation.getParam('boardTitle');
 
         return (
             <View style={styles.container}>
-                <ScrollView style={styles.container}>
-                    <TodoList
-                        todos={todos}
-                        navigation={navigation}
-                    />
-                </ScrollView>
-                <BoardFooter
-                    navigation={navigation}
+                <TodoList
                     boardId={boardId}
-                    boardTitle={title}
+                    todos={todos}
+                    navigation={navigation}
+                    key={boardId}
                 />
             </View>
         );

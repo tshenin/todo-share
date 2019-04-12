@@ -12,7 +12,7 @@ export const getTodosByBoard = async id => {
 export const addTodo = async data => {
     try {
         const response = await request('POST', 'todos', data);
-        return response.data.data;
+        return response.data.data[0];
     } catch (e) {
         console.error(e);
     }
