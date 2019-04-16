@@ -15,14 +15,17 @@ exports[`Render LabeledInput 1`] = `
     allowFontScaling={true}
     label="test"
     style={
-      Object {
-        "borderBottomColor": "#5e1c73",
-        "borderBottomWidth": 1,
-        "fontSize": 24,
-        "paddingBottom": 10,
-        "paddingRight": 10,
-        "paddingTop": 10,
-      }
+      Array [
+        Object {
+          "borderBottomColor": "#5e1c73",
+          "borderBottomWidth": 1,
+          "fontSize": 24,
+          "paddingBottom": 10,
+          "paddingRight": 10,
+          "paddingTop": 10,
+        },
+        false,
+      ]
     }
     underlineColorAndroid="transparent"
   />

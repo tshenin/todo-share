@@ -20,94 +20,28 @@ exports[`Render TodoList 1`] = `
     onStartShouldSetResponder={[Function]}
     style={
       Object {
-        "paddingLeft": 40,
-        "paddingRight": 20,
-        "paddingTop": 20,
+        "backgroundColor": "#fa6c35",
+        "borderRadius": 20,
+        "bottom": 20,
+        "opacity": 1,
+        "padding": 10,
+        "position": "absolute",
+        "right": 40,
       }
     }
   >
-    <View
+    <Text />
+    <Text
       style={
         Object {
-          "borderBottomColor": "rgba(0, 0, 0, 0.1)",
-          "borderBottomWidth": 1,
-          "flex": 1,
-          "paddingBottom": 10,
+          "color": "rgba(255, 255, 255, 0.8)",
+          "fontSize": 12,
+          "textAlign": "center",
         }
       }
     >
-      <Text
-        style={
-          Object {
-            "fontSize": 24,
-            "fontWeight": "300",
-            "lineHeight": 36,
-          }
-        }
-      >
-        Test title
-      </Text>
-      <Text
-        style={
-          Object {
-            "color": "rgba(0, 0, 0, 0.6)",
-            "fontWeight": "200",
-          }
-        }
-      >
-        Test desc
-      </Text>
-    </View>
-  </View>
-  <View
-    accessible={true}
-    isTVSelectable={true}
-    onResponderGrant={[Function]}
-    onResponderMove={[Function]}
-    onResponderRelease={[Function]}
-    onResponderTerminate={[Function]}
-    onResponderTerminationRequest={[Function]}
-    onStartShouldSetResponder={[Function]}
-    style={
-      Object {
-        "paddingLeft": 40,
-        "paddingRight": 20,
-        "paddingTop": 20,
-      }
-    }
-  >
-    <View
-      style={
-        Object {
-          "borderBottomColor": "rgba(0, 0, 0, 0.1)",
-          "borderBottomWidth": 1,
-          "flex": 1,
-          "paddingBottom": 10,
-        }
-      }
-    >
-      <Text
-        style={
-          Object {
-            "fontSize": 24,
-            "fontWeight": "300",
-            "lineHeight": 36,
-          }
-        }
-      >
-        Test title
-      </Text>
-      <Text
-        style={
-          Object {
-            "color": "rgba(0, 0, 0, 0.6)",
-            "fontWeight": "200",
-          }
-        }
-      >
-        Test desc
-      </Text>
-    </View>
+      Add Todo
+    </Text>
   </View>
 </View>
 `;

@@ -21,13 +21,16 @@ exports[`Render BoardsFooter 1`] = `
 >
   <Text
     style={
-      Object {
-        "color": "white",
-        "fontSize": 24,
-        "fontWeight": "300",
-        "lineHeight": 36,
-        "textAlign": "center",
-      }
+      Array [
+        Object {
+          "color": "white",
+          "fontSize": 24,
+          "fontWeight": "300",
+          "lineHeight": 36,
+          "textAlign": "center",
+        },
+        false,
+      ]
     }
   >
     test
