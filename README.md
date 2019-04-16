@@ -27,3 +27,5 @@ yarn start
 - send to new board after adding
 - set focus on title field on forms
 - think about how to add desc to todos
+- move to typescript
+- describe models to separate framework and buisness
