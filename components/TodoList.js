@@ -42,6 +42,7 @@ export class TodoList extends Component {
             const newTodo = await addTodo(todo);
             this.setState({ todos: [...todos, newTodo] });
         } catch (e) {
+            // todo add error handler
             console.error(e);
         }
         this.setAddMode(false);

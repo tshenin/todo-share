@@ -12,7 +12,7 @@ export class BoardList extends Component {
     };
 
     getBoardItems = () => {
-        const { boards, navigation } = this.props;
+        const { boards } = this.props;
         const { selected } = this.state;
 
         return boards.map(b => (
