@@ -1,5 +1,6 @@
 import React from 'react';
 import { StyleSheet, View, AlertIOS } from 'react-native';
+import PropTypes from 'prop-types';
 
 import { deleteBoard } from '../services/Boards';
 import { LabeledIcon } from './LabeledIcon';

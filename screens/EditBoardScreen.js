@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import { StyleSheet, ScrollView, View } from 'react-native';
+import PropTypes from 'prop-types';
 
 import { BoardForm } from '../components/BoardForm';
 import { Header } from '../components/Header';
@@ -48,3 +49,7 @@ const styles = StyleSheet.create({
         flex: 1,
     },
 });
+
+EditBoardScreen.propTypes = {
+    navigation: PropTypes.object,
+};

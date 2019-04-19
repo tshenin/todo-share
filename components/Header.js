@@ -1,5 +1,7 @@
 import React from 'react';
 import { View, Text, StyleSheet } from 'react-native';
+import PropTypes from 'prop-types';
+
 import { colors } from '../services/consts';
 
 export const Header = (props) => {
@@ -24,3 +26,7 @@ const styles = StyleSheet.create({
         color: colors.main,
     },
 });
+
+Header.propTypes = {
+    title: PropTypes.string,
+};

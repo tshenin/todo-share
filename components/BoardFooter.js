@@ -1,5 +1,6 @@
 import React from 'react';
 import { StyleSheet, View } from 'react-native';
+import PropTypes from 'prop-types';
 
 import { Footer } from './Footer';
 import { LabeledIcon } from './LabeledIcon';
@@ -29,3 +30,8 @@ const styles = StyleSheet.create({
         justifyContent: 'space-evenly',
     },
 });
+
+BoardFooter.propTypes = {
+    navigation: PropTypes.object,
+    boardId: PropTypes.number,
+};

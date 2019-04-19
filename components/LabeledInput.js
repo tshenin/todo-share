@@ -2,6 +2,8 @@ import React from 'react';
 import {
     StyleSheet, View, Text, TextInput,
 } from 'react-native';
+import PropTypes from 'prop-types';
+
 import { colors } from '../services/consts';
 
 export const LabeledInput = (props) => {
@@ -42,3 +44,8 @@ const styles = StyleSheet.create({
         color: colors.textDark,
     },
 });
+
+LabeledInput.propTypes = {
+    label: PropTypes.string,
+    size: PropTypes.number,
+};

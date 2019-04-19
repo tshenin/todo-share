@@ -1,5 +1,6 @@
 import React from 'react';
 import { StyleSheet, View } from 'react-native';
+import PropTypes from 'prop-types';
 
 import { getTodosByBoard } from '../services/Todos';
 import { Header } from '../components/Header';
@@ -47,3 +48,7 @@ const styles = StyleSheet.create({
         flex: 1,
     },
 });
+
+TodosScreen.propTypes = {
+    navigation: PropTypes.object,
+};

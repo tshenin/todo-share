@@ -1,6 +1,7 @@
 import React from 'react';
 import { StyleSheet, TouchableOpacity, Text } from 'react-native';
 import { EvilIcons } from '@expo/vector-icons';
+import PropTypes from 'prop-types';
 
 import { colors } from '../services/consts';
 

@@ -2,6 +2,8 @@ import React from 'react';
 import {
     TouchableHighlight, Text, StyleSheet, View,
 } from 'react-native';
+import PropTypes from 'prop-types';
+
 import { colors } from '../services/consts';
 
 export const TodoItem = (props) => {
@@ -44,3 +46,7 @@ const styles = StyleSheet.create({
         color: colors.textDark,
     },
 });
+
+TodoItem.propTypes = {
+    todo: PropTypes.object,
+};

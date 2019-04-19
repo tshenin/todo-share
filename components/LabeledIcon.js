@@ -3,6 +3,8 @@ import {
     StyleSheet, TouchableHighlight, Text, View,
 } from 'react-native';
 import { EvilIcons } from '@expo/vector-icons';
+import PropTypes from 'prop-types';
+
 import { colors } from '../services/consts';
 
 export const LabeledIcon = (props) => {
@@ -42,3 +44,9 @@ const styles = StyleSheet.create({
         textAlign: 'center',
     },
 });
+
+LabeledIcon.propTypes = {
+    onPress: PropTypes.func,
+    label: PropTypes.string,
+    name: PropTypes.string,
+};

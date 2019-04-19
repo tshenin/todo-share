@@ -1,5 +1,6 @@
 import React from 'react';
 import { StyleSheet, ScrollView, View } from 'react-native';
+import PropTypes from 'prop-types';
 
 import { TodoForm } from '../components/TodoForm';
 import { Header } from '../components/Header';
@@ -32,3 +33,7 @@ const styles = StyleSheet.create({
         flex: 1,
     },
 });
+
+AddTodoScreen.propTypes = {
+    navigation: PropTypes.object,
+};

@@ -24,7 +24,8 @@
             "error",
             4
         ],
+        "no-use-before-define": 0,
         "import/prefer-default-export": 0,
-        "no-use-before-define": 0
+        "react/display-name": 0
     }
 }

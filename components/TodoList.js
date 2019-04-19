@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import { View, StyleSheet, ScrollView } from 'react-native';
+import PropTypes from 'prop-types';
 
 import { TodoItem } from './TodoItem';
 import { FloatButton } from './FloatButton';
@@ -76,3 +77,7 @@ const styles = StyleSheet.create({
         paddingTop: 15,
     },
 });
+
+TodoList.propTypes = {
+    navigation: PropTypes.object,
+};

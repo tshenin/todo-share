@@ -1,5 +1,7 @@
 import React from 'react';
 import { StyleSheet, View } from 'react-native';
+import PropTypes from 'prop-types';
+
 import { colors, dims } from '../services/consts';
 
 export const Footer = props => (
@@ -22,3 +24,7 @@ const styles = StyleSheet.create({
         paddingBottom: 20,
     },
 });
+
+Footer.propTypes = {
+    children: PropTypes.element,
+};

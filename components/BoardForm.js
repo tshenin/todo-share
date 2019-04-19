@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import { View, StyleSheet, Text } from 'react-native';
+import PropTypes from 'prop-types';
 
 import { addBoard, updateBoardById } from '../services/Boards';
 import { colors, routes } from '../services/consts';

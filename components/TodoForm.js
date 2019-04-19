@@ -3,6 +3,7 @@ import {
     View,
     StyleSheet,
 } from 'react-native';
+import PropTypes from 'prop-types';
 
 import { LabeledInput } from './LabeledInput';
 import { CustomButton } from './CustomButton';
@@ -67,3 +68,8 @@ const styles = StyleSheet.create({
         justifyContent: 'space-between',
     },
 });
+
+TodoForm.propTypes = {
+    onCancel: PropTypes.func,
+    onSend: PropTypes.func,
+};

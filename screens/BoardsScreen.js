@@ -1,5 +1,6 @@
 import React from 'react';
 import { StyleSheet, View } from 'react-native';
+import PropTypes from 'prop-types';
 
 import { getBoards } from '../services/Boards';
 import { BoardList } from '../components/BoardList';
@@ -57,3 +58,7 @@ const styles = StyleSheet.create({
         flex: 1,
     },
 });
+
+BoardsScreen.propTypes = {
+    navigation: PropTypes.object,
+};

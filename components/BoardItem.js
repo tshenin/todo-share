@@ -6,6 +6,8 @@ import {
     View,
     Animated,
 } from 'react-native';
+import PropTypes from 'prop-types';
+
 import { colors } from '../services/consts';
 
 export const BoardItem = (props) => {
