@@ -1,13 +1,13 @@
 import 'react-native';
 import React from 'react';
-import { TodoItem } from '../TodoItem';
 import renderer from 'react-test-renderer';
+import { TodoItem } from '../TodoItem';
 
 it('Render TodoItem', async () => {
     const todoMock = {
         id: 1,
         title: 'Test title',
-        desc: 'Test desc'
+        desc: 'Test desc',
     };
 
     const tree = renderer.create(
@@ -15,7 +15,7 @@ it('Render TodoItem', async () => {
             index={1}
             navigation={{}}
             todo={todoMock}
-        />
+        />,
     ).toJSON();
     expect(tree).toMatchSnapshot();
 });

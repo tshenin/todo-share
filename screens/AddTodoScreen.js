@@ -4,7 +4,7 @@ import { StyleSheet, ScrollView, View } from 'react-native';
 import { TodoForm } from '../components/TodoForm';
 import { Header } from '../components/Header';
 
-export const AddTodoScreen = props => {
+export const AddTodoScreen = (props) => {
     const { navigation } = props;
     const boardId = props.navigation.getParam('boardId');
     return (
@@ -24,11 +24,11 @@ AddTodoScreen.navigationOptions = () => {
     return {
         title,
         header: () => <Header title={title}></Header>,
-    }
-}
+    };
+};
 
 const styles = StyleSheet.create({
     container: {
         flex: 1,
     },
-})
+});

@@ -1,11 +1,11 @@
 import 'react-native';
 import React from 'react';
-import { BoardForm } from '../BoardForm';
 import renderer from 'react-test-renderer';
+import { BoardForm } from '../BoardForm';
 
 it('Render BoardForm', async () => {
     const tree = renderer.create(
-        <BoardForm />
+        <BoardForm />,
     ).toJSON();
     expect(tree).toMatchSnapshot();
 });

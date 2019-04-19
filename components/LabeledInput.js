@@ -1,8 +1,10 @@
 import React from 'react';
-import { StyleSheet, View, Text, TextInput } from 'react-native';
+import {
+    StyleSheet, View, Text, TextInput,
+} from 'react-native';
 import { colors } from '../services/consts';
 
-export const LabeledInput = props => {
+export const LabeledInput = (props) => {
     const { label, size } = props;
 
     return (
@@ -13,7 +15,7 @@ export const LabeledInput = props => {
             <TextInput
                 style={[
                     styles.input,
-                    size === 'small' && styles.smallInput
+                    size === 'small' && styles.smallInput,
                 ]}
                 {...props}
             />
@@ -34,9 +36,9 @@ const styles = StyleSheet.create({
         fontSize: 14,
         paddingTop: 5,
         paddingRight: 5,
-        paddingBottom: 5
+        paddingBottom: 5,
     },
     label: {
         color: colors.textDark,
-    }
+    },
 });

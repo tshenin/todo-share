@@ -8,10 +8,9 @@ import { LabeledInput } from './LabeledInput';
 import { CustomButton } from './CustomButton';
 
 export class TodoForm extends React.Component {
-
     state = {
         title: '',
-        desc: ''
+        desc: '',
     }
 
     render() {
@@ -45,13 +44,13 @@ export class TodoForm extends React.Component {
                     />
                     <CustomButton
                         title={'Add Todo'}
-                        onPress={() => onSend({...this.state})}
+                        onPress={() => onSend({ ...this.state })}
                     />
                 </View>
             </View>
         );
     }
-};
+}
 
 const styles = StyleSheet.create({
     container: {
@@ -60,11 +59,11 @@ const styles = StyleSheet.create({
         paddingLeft: 40,
     },
     fieldset: {
-        marginBottom: 20
+        marginBottom: 20,
     },
     buttons: {
         flex: 1,
         flexDirection: 'row',
         justifyContent: 'space-between',
-    }
+    },
 });

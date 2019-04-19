@@ -2,7 +2,7 @@ import React from 'react';
 import { View, Text, StyleSheet } from 'react-native';
 import { colors } from '../services/consts';
 
-export const Header = props => {
+export const Header = (props) => {
     const { title } = props;
     return (
         <View style={styles.container}>
@@ -22,5 +22,5 @@ const styles = StyleSheet.create({
         fontSize: 48,
         fontWeight: 'bold',
         color: colors.main,
-    }
-})
+    },
+});

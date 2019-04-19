@@ -1,11 +1,11 @@
 import 'react-native';
 import React from 'react';
-import { BoardsFooter } from '../BoardsFooter';
 import renderer from 'react-test-renderer';
+import { BoardsFooter } from '../BoardsFooter';
 
 it('Render BoardsFooter', async () => {
     const tree = renderer.create(
-        <BoardsFooter navigation={{}} />
+        <BoardsFooter navigation={{}} />,
     ).toJSON();
     expect(tree).toMatchSnapshot();
 });

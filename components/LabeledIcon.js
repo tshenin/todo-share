@@ -1,9 +1,11 @@
 import React from 'react';
-import { StyleSheet, TouchableHighlight, Text, View } from 'react-native';
+import {
+    StyleSheet, TouchableHighlight, Text, View,
+} from 'react-native';
 import { EvilIcons } from '@expo/vector-icons';
 import { colors } from '../services/consts';
 
-export const LabeledIcon = props => {
+export const LabeledIcon = (props) => {
     const { onPress, label, name } = props;
 
     return (
@@ -37,6 +39,6 @@ const styles = StyleSheet.create({
     text: {
         fontSize: 12,
         color: colors.textDark,
-        textAlign: 'center'
-    }
+        textAlign: 'center',
+    },
 });

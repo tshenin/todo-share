@@ -4,7 +4,7 @@ export const colors = {
     textDark: 'rgba(0, 0, 0, 0.6)',
     textLight: 'rgba(255, 255, 255, 0.8)',
     border: 'rgba(0, 0, 0, 0.1)',
-    danger: 'red'
+    danger: 'red',
 };
 
 export const dims = {
@@ -17,4 +17,4 @@ export const routes = {
     Boards: 'Boards',
     EditBoard: 'EditBoard',
     Todos: 'Todos',
-}
+};

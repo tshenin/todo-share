@@ -2,13 +2,11 @@ import React from 'react';
 import { StyleSheet, View } from 'react-native';
 import { colors, dims } from '../services/consts';
 
-export const Footer = props => {
-    return (
-        <View style={styles.footer}>
-            {props.children}
-        </View>
-    );
-};
+export const Footer = props => (
+    <View style={styles.footer}>
+        {props.children}
+    </View>
+);
 
 const styles = StyleSheet.create({
     footer: {
@@ -21,6 +19,6 @@ const styles = StyleSheet.create({
         right: 0,
         bottom: 0,
         backgroundColor: 'white',
-        paddingBottom: 20
+        paddingBottom: 20,
     },
 });

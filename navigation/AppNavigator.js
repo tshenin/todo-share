@@ -18,8 +18,8 @@ const AppNavigator = createStackNavigator(
     },
     {
         initialRouteName: routes.Boards,
-        headerMode: 'screen'
-    }
+        headerMode: 'screen',
+    },
 );
 
 export default createAppContainer(AppNavigator);

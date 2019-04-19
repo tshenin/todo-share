@@ -17,11 +17,9 @@ export class BoardForm extends Component {
         };
     }
 
-    isUpdateMode = () => {
-        return !!(this.props.board && this.props.board.id);
-    }
+    isUpdateMode = () => !!(this.props.board && this.props.board.id)
 
-    checkBoardValidity = data => {
+    checkBoardValidity = (data) => {
         if (!data.title) {
             this.setState({ invalidTitle: true });
             return false;
@@ -83,7 +81,7 @@ export class BoardForm extends Component {
             </View>
         );
     }
-};
+}
 
 const styles = StyleSheet.create({
     container: {
@@ -92,7 +90,7 @@ const styles = StyleSheet.create({
         paddingLeft: 40,
     },
     fieldset: {
-        marginBottom: 20
+        marginBottom: 20,
     },
     input: {
         paddingTop: 10,
@@ -107,6 +105,6 @@ const styles = StyleSheet.create({
     },
     errorMessage: {
         paddingTop: 5,
-        color: colors.danger
-    }
+        color: colors.danger,
+    },
 });

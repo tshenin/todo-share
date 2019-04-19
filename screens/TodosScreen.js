@@ -7,9 +7,8 @@ import { TodoList } from '../components/TodoList';
 import { BoardFooter } from '../components/BoardFooter';
 
 export class TodosScreen extends React.Component {
-    
     state = {
-        todos: []
+        todos: [],
     };
 
     async componentDidMount() {
@@ -41,11 +40,11 @@ TodosScreen.navigationOptions = (props) => {
     return {
         title,
         header: () => <Header title={title}></Header>,
-    }
-}
+    };
+};
 
 const styles = StyleSheet.create({
     container: {
         flex: 1,
     },
-})
+});

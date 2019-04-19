@@ -14,18 +14,18 @@ export const BoardItem = (props) => {
         onPress,
         onLongPress,
         blocked,
-        selected
+        selected,
     } = props;
 
     const borderAppearing = new Animated.Value(0);
     const opacityAnimation = new Animated.Value(1);
 
     Animated
-        .timing(borderAppearing, { toValue: selected ? 4 : 0, duration: 50, })
+        .timing(borderAppearing, { toValue: selected ? 4 : 0, duration: 50 })
         .start();
-    
+
     Animated
-        .timing(opacityAnimation, { toValue: blocked ? 0.7 : 1, duration: 50, })
+        .timing(opacityAnimation, { toValue: blocked ? 0.7 : 1, duration: 50 })
         .start();
 
     return (
@@ -40,7 +40,7 @@ export const BoardItem = (props) => {
                     styles.item,
                     selected ? styles.selected : {},
                     { opacity: opacityAnimation },
-                    { borderWidth: borderAppearing }
+                    { borderWidth: borderAppearing },
                 ]}>
                     <Text style={styles.title}>{board.title}</Text>
                     <Text style={styles.desc}>{board.desc}</Text>
@@ -73,10 +73,10 @@ const styles = StyleSheet.create({
         color: 'white',
         fontSize: 24,
         fontWeight: '300',
-        paddingBottom: 10
+        paddingBottom: 10,
     },
     desc: {
         fontWeight: '200',
         color: colors.textLight,
-    }
+    },
 });

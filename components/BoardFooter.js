@@ -5,7 +5,7 @@ import { Footer } from './Footer';
 import { LabeledIcon } from './LabeledIcon';
 import { routes } from '../services/consts';
 
-export const BoardFooter = props => {
+export const BoardFooter = (props) => {
     const { navigation, boardId } = props;
     const goToAddTodo = () => navigation.navigate(routes.AddTodo, { boardId });
 
@@ -27,5 +27,5 @@ const styles = StyleSheet.create({
         flex: 1,
         flexDirection: 'row',
         justifyContent: 'space-evenly',
-    }
+    },
 });

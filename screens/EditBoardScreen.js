@@ -30,16 +30,15 @@ export class EditBoardScreen extends Component {
             </View>
         );
     }
-
-};
+}
 
 EditBoardScreen.navigationOptions = () => {
     const title = 'Edit Board';
     return {
         title,
         header: () => <Header title={title}></Header>,
-    }
-}
+    };
+};
 
 const styles = StyleSheet.create({
     wrapper: {
@@ -48,4 +47,4 @@ const styles = StyleSheet.create({
     container: {
         flex: 1,
     },
-})
+});

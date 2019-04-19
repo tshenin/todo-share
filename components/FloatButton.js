@@ -4,7 +4,7 @@ import { EvilIcons } from '@expo/vector-icons';
 
 import { colors } from '../services/consts';
 
-export const FloatButton = props => {
+export const FloatButton = (props) => {
     const { title, onPress, name } = props;
     return (
         <TouchableOpacity
@@ -37,6 +37,6 @@ const styles = StyleSheet.create({
     text: {
         fontSize: 12,
         color: colors.textLight,
-        textAlign: 'center'
-    }
+        textAlign: 'center',
+    },
 });

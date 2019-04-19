@@ -7,36 +7,33 @@ import { TodoForm } from './TodoForm';
 import { addTodo } from '../services/Todos';
 
 export class TodoList extends Component {
-
     state = {
         addMode: false,
         todos: [],
-        firstUpdate: true
+        firstUpdate: true,
     }
 
     static getDerivedStateFromProps(props, state) {
         const { firstUpdate } = state;
         if (firstUpdate && props.todos.length > state.todos.length) {
-            let todos = props.todos;
+            const { todos } = props;
             return { todos, firstUpdate: false };
-        } else {
-            let todos = state.todos;
-            return { todos };
         }
+        const { todos } = state;
+        return { todos };
     }
 
-    getTodoItems = todos =>
-        todos.map(t => (
-            <TodoItem
-                todo={t}
-                key={t.id}
-            />
-        ));
+    getTodoItems = todos => todos.map(t => (
+        <TodoItem
+            todo={t}
+            key={t.id}
+        />
+    ));
 
 
     setAddMode = value => this.setState({ addMode: value });
 
-    addNewTodo = async data => {
+    addNewTodo = async (data) => {
         const { boardId } = this.props;
         const { todos } = this.state;
         const todo = { board_id: boardId, ...data };
@@ -70,11 +67,11 @@ export class TodoList extends Component {
             </View>
         );
     }
-};
+}
 
 const styles = StyleSheet.create({
     container: {
         flex: 1,
         paddingTop: 15,
-    }
+    },
 });

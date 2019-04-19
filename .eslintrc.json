@@ -2,17 +2,27 @@
     "env": {
         "node": true,
         "browser": true,
-        "es6": true
+        "es6": true,
+        "jest": true
     },
     "plugins": [
-        "react"
+        "react",
+        "import",
+        "jsx-a11y"
     ],
     "parser": "babel-eslint",
-    "extends": "airbnb-base",
+    "extends": [
+        "airbnb-base",
+        "plugin:react/recommended",
+        "plugin:jsx-a11y/recommended",
+        "plugin:import/errors",
+        "plugin:import/warnings"
+    ],
     "rules": {
         "indent": [
             "error",
             4
-        ]
+        ],
+        "import/prefer-default-export": 0
     }
 }

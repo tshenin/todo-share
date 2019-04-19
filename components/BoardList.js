@@ -7,9 +7,8 @@ import { FloatButton } from './FloatButton';
 import { routes } from '../services/consts';
 
 export class BoardList extends Component {
-
     state = {
-        selected: null
+        selected: null,
     };
 
     getBoardItems = () => {
@@ -25,17 +24,17 @@ export class BoardList extends Component {
                 selected={selected && b.id === selected.id}
                 key={b.id}
             />
-        ))
+        ));
     };
 
-    goToTodos = board => {
+    goToTodos = (board) => {
         const { navigation } = this.props;
         const { selected } = this.state;
 
         if (!selected || board.id === selected.id) {
             navigation.navigate(routes.Todos, {
                 boardId: board.id,
-                boardTitle: board.title
+                boardTitle: board.title,
             });
             return;
         }
@@ -43,7 +42,7 @@ export class BoardList extends Component {
         this.setState({ selected: null });
     }
 
-    selectBoard = board => {
+    selectBoard = (board) => {
         this.setState({ selected: board });
     };
 
@@ -73,8 +72,8 @@ export class BoardList extends Component {
                 />}
             </View>
         );
-    };
-};
+    }
+}
 
 const styles = StyleSheet.create({
     container: {
@@ -85,5 +84,5 @@ const styles = StyleSheet.create({
         flexWrap: 'wrap',
         paddingTop: 20,
         paddingLeft: 40,
-    }
+    },
 });

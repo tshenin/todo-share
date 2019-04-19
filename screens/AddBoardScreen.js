@@ -4,7 +4,7 @@ import { StyleSheet, ScrollView, View } from 'react-native';
 import { BoardForm } from '../components/BoardForm';
 import { Header } from '../components/Header';
 
-export const AddBoardScreen = props => {
+export const AddBoardScreen = (props) => {
     const { navigation } = props;
     return (
         <View style={styles.wrapper}>
@@ -20,8 +20,8 @@ AddBoardScreen.navigationOptions = () => {
     return {
         title,
         header: () => <Header title={title}></Header>,
-    }
-}
+    };
+};
 
 const styles = StyleSheet.create({
     wrapper: {
@@ -30,4 +30,4 @@ const styles = StyleSheet.create({
     container: {
         flex: 1,
     },
-})
+});

@@ -9,20 +9,20 @@ export class BoardsScreen extends React.Component {
     constructor(props) {
         super(props);
         this.state = {
-            boards: []
+            boards: [],
         };
     }
 
     updateBoards = async () => {
         const boards = await getBoards();
         this.setState({
-            boards: [...boards]
+            boards: [...boards],
         });
     }
 
     componentDidMount() {
         this.updateBoards();
-        this.props.navigation.addListener('willFocus', payload => {
+        this.props.navigation.addListener('willFocus', (payload) => {
             if (payload.state.params) {
                 this.updateBoards();
             }
@@ -42,18 +42,18 @@ export class BoardsScreen extends React.Component {
             </View>
         );
     }
-};
+}
 
 BoardsScreen.navigationOptions = () => {
     const title = 'Boards';
     return {
         title,
         header: () => <Header title={title}></Header>,
-    }
-}
+    };
+};
 
 const styles = StyleSheet.create({
     container: {
         flex: 1,
-    }
-})
+    },
+});

@@ -1,5 +1,7 @@
 import React from 'react';
-import { TouchableHighlight, Text, StyleSheet, View } from 'react-native';
+import {
+    TouchableHighlight, Text, StyleSheet, View,
+} from 'react-native';
 import { colors } from '../services/consts';
 
 export const TodoItem = (props) => {
@@ -40,5 +42,5 @@ const styles = StyleSheet.create({
     desc: {
         fontWeight: '200',
         color: colors.textDark,
-    }
+    },
 });

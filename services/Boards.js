@@ -9,7 +9,7 @@ export const getBoards = async () => {
     }
 };
 
-export const getBoardById = async id => {
+export const getBoardById = async (id) => {
     try {
         const response = await request('GET', `boards/${id}`);
         return response.data.data[0];
@@ -27,7 +27,7 @@ export const updateBoardById = async (id, data) => {
     }
 };
 
-export const addBoard = async data => {
+export const addBoard = async (data) => {
     try {
         const response = await request('POST', 'boards', data);
         return response.data.data;
@@ -36,7 +36,7 @@ export const addBoard = async data => {
     }
 };
 
-export const deleteBoard = async id => {
+export const deleteBoard = async (id) => {
     try {
         const response = await request('DELETE', `boards/${id}`);
         return response.data.data;
