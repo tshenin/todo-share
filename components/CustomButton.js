@@ -11,6 +11,7 @@ export const CustomButton = (props) => {
             style={[
                 styles.button,
                 mod === 'light' && styles.lightButton,
+                mod === 'trans' && styles.transButton,
             ]}
             onPress={onPress}
         >
@@ -18,6 +19,7 @@ export const CustomButton = (props) => {
                 style={[
                     styles.title,
                     mod === 'light' && styles.lightModText,
+                    mod === 'trans' && styles.transModText,
                 ]}>
                 {title}
             </Text>
@@ -34,6 +36,9 @@ const styles = StyleSheet.create({
     lightButton: {
         backgroundColor: 'white',
     },
+    transButton: {
+        backgroundColor: 'rgba(255, 255, 255, 0)',
+    },
     title: {
         textAlign: 'center',
         color: 'white',
@@ -43,6 +48,9 @@ const styles = StyleSheet.create({
     },
     lightModText: {
         color: colors.additional,
+    },
+    transModText: {
+        color: 'white',
     },
 });
 

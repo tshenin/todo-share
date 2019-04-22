@@ -1,13 +1,15 @@
-import { createAppContainer, createStackNavigator } from 'react-navigation';
+import { createAppContainer, createStackNavigator, createSwitchNavigator } from 'react-navigation';
 
 import { BoardsScreen } from '../screens/BoardsScreen';
 import { TodosScreen } from '../screens/TodosScreen';
 import { AddBoardScreen } from '../screens/AddBoardScreen';
 import { AddTodoScreen } from '../screens/AddTodoScreen';
 import { EditBoardScreen } from '../screens/EditBoardScreen';
+import { SignInScreen } from '../screens/SignInScreen';
+import { AuthLoadingScreen } from '../screens/AuthLoadingScreen';
 import { routes } from '../services/consts';
 
-const AppNavigator = createStackNavigator(
+const AppStack = createStackNavigator(
     {
         [routes.Boards]: BoardsScreen,
         [routes.Todos]: TodosScreen,
@@ -18,6 +20,26 @@ const AppNavigator = createStackNavigator(
     {
         initialRouteName: routes.Boards,
         headerMode: 'screen',
+    },
+);
+
+const AuthStack = createStackNavigator(
+    {
+        SignIn: SignInScreen,
+    },
+    {
+        headerMode: 'none',
+    },
+);
+
+const AppNavigator = createSwitchNavigator(
+    {
+        AuthLoading: AuthLoadingScreen,
+        App: AppStack,
+        Auth: AuthStack,
+    },
+    {
+        initialRouteName: 'AuthLoading',
     },
 );
 
