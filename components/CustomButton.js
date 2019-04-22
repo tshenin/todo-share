@@ -45,3 +45,9 @@ const styles = StyleSheet.create({
         color: colors.additional,
     },
 });
+
+CustomButton.propTypes = {
+    title: PropTypes.string,
+    onPress: PropTypes.func,
+    mod: PropTypes.string,
+};

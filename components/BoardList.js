@@ -87,3 +87,8 @@ const styles = StyleSheet.create({
         paddingLeft: 40,
     },
 });
+
+BoardList.propTypes = {
+    boards: PropTypes.array,
+    navigation: PropTypes.object,
+};

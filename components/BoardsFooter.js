@@ -76,3 +76,8 @@ const styles = StyleSheet.create({
         justifyContent: 'space-evenly',
     },
 });
+
+BoardsFooter.propTypes = {
+    navigation: PropTypes.object,
+    selected: PropTypes.bool,
+};

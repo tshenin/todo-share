@@ -80,4 +80,6 @@ const styles = StyleSheet.create({
 
 TodoList.propTypes = {
     navigation: PropTypes.object,
+    todos: PropTypes.array,
+    boardId: PropTypes.number,
 };

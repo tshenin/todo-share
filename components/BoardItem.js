@@ -82,3 +82,11 @@ const styles = StyleSheet.create({
         color: colors.textLight,
     },
 });
+
+BoardItem.propTypes = {
+    board: PropTypes.object,
+    onPress: PropTypes.func,
+    onLongPress: PropTypes.func,
+    blocked: PropTypes.bool,
+    selected: PropTypes.bool,
+};

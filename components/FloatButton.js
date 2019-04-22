@@ -41,3 +41,9 @@ const styles = StyleSheet.create({
         textAlign: 'center',
     },
 });
+
+FloatButton.propTypes = {
+    title: PropTypes.string,
+    onPress: PropTypes.func,
+    name: PropTypes.string,
+};

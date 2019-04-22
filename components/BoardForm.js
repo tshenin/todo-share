@@ -109,3 +109,8 @@ const styles = StyleSheet.create({
         color: colors.danger,
     },
 });
+
+BoardForm.propTypes = {
+    board: PropTypes.object,
+    navigation: PropTypes.object,
+};
