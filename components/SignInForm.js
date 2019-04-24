@@ -1,10 +1,13 @@
 import React, { Component } from 'react';
 import { View, StyleSheet, Text } from 'react-native';
 import PropTypes from 'prop-types';
+import { SecureStore } from 'expo';
 
 import { colors } from '../services/consts';
 import { LabeledInput } from './LabeledInput';
 import { CustomButton } from './CustomButton';
+import { signIn } from '../services/Auth';
+
 
 export class SignInForm extends Component {
     state = {
@@ -12,8 +15,18 @@ export class SignInForm extends Component {
         password: '',
     };
 
-    signin = () => {
-        this.props.navigation.navigate('App');
+    signin = async () => {
+        try {
+            const token = await signIn({
+                username: this.state.email,
+                password: this.state.password
+            });
+            await SecureStore.setItemAsync('token', token);
+            this.props.navigation.navigate('App');
+        } catch (e) {
+            console.log(e);
+        }
+
     }
 
     forget = () => {
