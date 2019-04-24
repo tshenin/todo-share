@@ -30,7 +30,8 @@ export class BoardForm extends Component {
 
     submitForm = async () => {
         const { navigation, board = null } = this.props;
-        const data = { ...this.state };
+        const { title, desc } = this.state;
+        const data = { title, desc };
 
         if (!this.checkBoardValidity(data)) {
             return;

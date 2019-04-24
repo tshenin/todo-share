@@ -31,7 +31,6 @@ export class TodoList extends Component {
         />
     ));
 
-
     setAddMode = value => this.setState({ addMode: value });
 
     addNewTodo = async (data) => {

@@ -79,5 +79,5 @@ const styles = StyleSheet.create({
 
 BoardsFooter.propTypes = {
     navigation: PropTypes.object,
-    selected: PropTypes.bool,
+    selected: PropTypes.object,
 };
