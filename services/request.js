@@ -1,7 +1,7 @@
 import axios from 'axios';
 import { SecureStore } from 'expo';
 
-const getApiUrl = (releaseChannel) => {
+const getApiUrl = () => {
     // if (releaseChannel === undefined) {
     return 'http://localhost:1337/';
     // }
@@ -11,7 +11,7 @@ const getApiUrl = (releaseChannel) => {
     // if (releaseChannel.contains('prod')) {
     //     return 'http://194.87.95.58:1337/';
     // }
-}
+};
 
 export const request = async (method, url, data, open) => {
     let headers = {};

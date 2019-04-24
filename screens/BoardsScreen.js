@@ -15,10 +15,12 @@ export class BoardsScreen extends React.Component {
     }
 
     updateBoards = async () => {
-        const boards = await getBoards();
-        this.setState({
-            boards: [...boards],
-        });
+        try {
+            const boards = await getBoards();
+            this.setState({ boards: [...boards] });
+        } catch (e) {
+            console.error(e.message);
+        }
     }
 
     componentDidMount() {
