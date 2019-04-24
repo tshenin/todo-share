@@ -17,16 +17,15 @@ export class SignInForm extends Component {
 
     signin = async () => {
         try {
-            const token = await signIn({
+            const { token } = await signIn({
                 username: this.state.email,
-                password: this.state.password
+                password: this.state.password,
             });
             await SecureStore.setItemAsync('token', token);
             this.props.navigation.navigate('App');
         } catch (e) {
             console.log(e);
         }
-
     }
 
     forget = () => {
