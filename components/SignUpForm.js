@@ -6,10 +6,10 @@ import { SecureStore } from 'expo';
 import { colors } from '../services/consts';
 import { LabeledInput } from './LabeledInput';
 import { CustomButton } from './CustomButton';
-import { signIn } from '../services/Auth';
+import { signUp } from '../services/Auth';
 
 
-export class SignInForm extends Component {
+export class SignUpForm extends Component {
     state = {
         email: '',
         password: '',
@@ -17,7 +17,7 @@ export class SignInForm extends Component {
 
     signin = async () => {
         try {
-            const { token } = await signIn({
+            const { token } = await signUp({
                 username: this.state.email,
                 password: this.state.password,
             });
@@ -32,14 +32,14 @@ export class SignInForm extends Component {
         this.props.navigation.navigate('App');
     }
 
-    signup = () => {
-        this.props.navigation.navigate('SignUp');
+    signin = () => {
+        this.props.navigation.navigate('SignIn');
     }
 
     render() {
         return (
             <View style={styles.container}>
-                <Text style={styles.title}>Sign In</Text>
+                <Text style={styles.title}>Sign Up</Text>
                 <View style={styles.fieldset}>
                     <LabeledInput
                         label='E-mail'
@@ -62,7 +62,7 @@ export class SignInForm extends Component {
                 </View>
                 <View style={styles.fieldset}>
                     <CustomButton
-                        title='Sign in'
+                        title='Sign Up'
                         onPress={this.signin}
                     />
                 </View>
@@ -75,8 +75,8 @@ export class SignInForm extends Component {
                 </View>
                 <View style={styles.fieldset}>
                     <CustomButton
-                        title='Sign up'
-                        onPress={this.signup}
+                        title='Sign in'
+                        onPress={this.signin}
                         mod='trans'
                     />
                 </View>
@@ -107,6 +107,6 @@ const styles = StyleSheet.create({
     },
 });
 
-SignInForm.propTypes = {
+SignUpForm.propTypes = {
     navigation: PropTypes.object,
 };

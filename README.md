@@ -26,5 +26,5 @@ yarn start
 - set focus on title field on forms
 - think about how to add desc to todos
 - move to typescript
-- describe models to separate framework and buisness
+- describe models to separate framework and business
 - run linting before commit

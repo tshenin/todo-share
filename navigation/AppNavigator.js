@@ -6,6 +6,7 @@ import { AddBoardScreen } from '../screens/AddBoardScreen';
 import { AddTodoScreen } from '../screens/AddTodoScreen';
 import { EditBoardScreen } from '../screens/EditBoardScreen';
 import { SignInScreen } from '../screens/SignInScreen';
+import { SignUpScreen } from '../screens/SignUpScreen';
 import { AuthLoadingScreen } from '../screens/AuthLoadingScreen';
 import { routes } from '../services/consts';
 
@@ -23,9 +24,10 @@ const AppStack = createStackNavigator(
     },
 );
 
-const AuthStack = createStackNavigator(
+const AuthStack = createSwitchNavigator(
     {
         SignIn: SignInScreen,
+        SignUp: SignUpScreen,
     },
     {
         headerMode: 'none',
