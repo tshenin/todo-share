@@ -17,7 +17,7 @@ export const updateBoardById = async (id, data) => {
 
 export const addBoard = async (data) => {
     const response = await request('POST', 'boards', data);
-    return response.data.data;
+    return response.data.data[0];
 };
 
 export const deleteBoard = async (id) => {

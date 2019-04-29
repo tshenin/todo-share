@@ -1,5 +1,10 @@
 import React, { Component } from 'react';
-import { View, StyleSheet, Text } from 'react-native';
+import {
+    View,
+    StyleSheet,
+    Text,
+    AlertIOS,
+} from 'react-native';
 import PropTypes from 'prop-types';
 
 import { addBoard, updateBoardById } from '../services/Boards';
@@ -17,6 +22,13 @@ export class BoardForm extends Component {
             invalidTitle: false,
         };
     }
+
+    showErrorAlert = () => {
+        AlertIOS.alert(
+            'Something go wrong',
+            'Please try later or restart the app',
+        );
+    };
 
     isUpdateMode = () => !!(this.props.board && this.props.board.id)
 
@@ -40,12 +52,17 @@ export class BoardForm extends Component {
         try {
             if (this.isUpdateMode()) {
                 await updateBoardById(board.id, data);
+                navigation.navigate(routes.Boards, { refresh: true });
             } else {
-                await addBoard(data);
+                const newBoard = await addBoard(data);
+                navigation.navigate(routes.Todos, {
+                    boardId: newBoard.id,
+                    boardTitle: newBoard.title,
+                });
             }
-            navigation.navigate(routes.Boards, { refresh: true });
         } catch (e) {
-            console.error(e);
+            // todo if the reason is not recognized
+            this.showErrorAlert();
         }
     }
 
@@ -77,6 +94,7 @@ export class BoardForm extends Component {
                         title={this.isUpdateMode()
                             ? 'Update Board'
                             : 'Add Board'}
+                        disabled={!this.submitButtonDisabled}
                         onPress={this.submitForm}
                     />
                 </View>

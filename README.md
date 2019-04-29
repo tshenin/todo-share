@@ -21,7 +21,6 @@ yarn start
 - add api tests with mocks
 - add telegram bot for travis
 - upgrade to expo sdk-33 when it will release
-- send to new board after adding
 - set focus on title field on forms
 - think about how to add desc to todos
 - move to typescript

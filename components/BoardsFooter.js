@@ -11,14 +11,21 @@ export const BoardsFooter = (props) => {
     const { navigation, selected, afterDelete } = props;
     const goToAddBoard = () => navigation.navigate(routes.AddBoard);
     const goToEditBoard = () => navigation.navigate(routes.EditBoard, { boardId: selected.id });
+
+    const showErrorAlert = () => {
+        AlertIOS.alert(
+            'Something go wrong',
+            'Please try later or restart the app',
+        );
+    };
     const deleteCurrentBoard = async () => {
         try {
             await deleteBoard(selected.id);
             afterDelete();
         } catch (e) {
-            console.log(e);
+            // todo if the reason is not recognized
+            showErrorAlert();
         }
-        
     };
     const showDeleteAlert = () => {
         AlertIOS.alert(

@@ -1,5 +1,10 @@
 import React, { Component } from 'react';
-import { View, StyleSheet, ScrollView, Vibration } from 'react-native';
+import {
+    View,
+    StyleSheet,
+    ScrollView,
+    Vibration,
+} from 'react-native';
 import PropTypes from 'prop-types';
 
 import { BoardItem } from './BoardItem';
