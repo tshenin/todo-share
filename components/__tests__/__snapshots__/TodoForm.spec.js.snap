@@ -20,9 +20,12 @@ exports[`Render TodoForm 1`] = `
     <View>
       <Text
         style={
-          Object {
-            "color": "rgba(0, 0, 0, 0.6)",
-          }
+          Array [
+            Object {
+              "color": "rgba(0, 0, 0, 0.6)",
+            },
+            false,
+          ]
         }
       >
         Title
@@ -42,6 +45,7 @@ exports[`Render TodoForm 1`] = `
               "paddingRight": 10,
               "paddingTop": 10,
             },
+            false,
             false,
           ]
         }
@@ -95,6 +99,7 @@ exports[`Render TodoForm 1`] = `
             Object {
               "color": "#fa6c35",
             },
+            false,
           ]
         }
       >
@@ -129,6 +134,7 @@ exports[`Render TodoForm 1`] = `
               "lineHeight": 36,
               "textAlign": "center",
             },
+            false,
             false,
           ]
         }

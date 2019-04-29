@@ -4,9 +4,12 @@ exports[`Render LabeledInput 1`] = `
 <View>
   <Text
     style={
-      Object {
-        "color": "rgba(0, 0, 0, 0.6)",
-      }
+      Array [
+        Object {
+          "color": "rgba(0, 0, 0, 0.6)",
+        },
+        false,
+      ]
     }
   >
     test
@@ -24,6 +27,7 @@ exports[`Render LabeledInput 1`] = `
           "paddingRight": 10,
           "paddingTop": 10,
         },
+        false,
         false,
       ]
     }
