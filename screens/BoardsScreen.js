@@ -40,6 +40,7 @@ export class BoardsScreen extends React.Component {
             <View style={styles.container}>
                 <BoardList
                     boards={boards}
+                    updateBoards={this.updateBoards}
                     navigation={navigation}
                 />
             </View>

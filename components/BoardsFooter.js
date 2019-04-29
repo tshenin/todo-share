@@ -8,12 +8,17 @@ import { Footer } from './Footer';
 import { routes } from '../services/consts';
 
 export const BoardsFooter = (props) => {
-    const { navigation, selected } = props;
+    const { navigation, selected, afterDelete } = props;
     const goToAddBoard = () => navigation.navigate(routes.AddBoard);
     const goToEditBoard = () => navigation.navigate(routes.EditBoard, { boardId: selected.id });
     const deleteCurrentBoard = async () => {
-        await deleteBoard(selected.id);
-        navigation.navigate(routes.Boards, { refresh: true });
+        try {
+            await deleteBoard(selected.id);
+            afterDelete();
+        } catch (e) {
+            console.log(e);
+        }
+        
     };
     const showDeleteAlert = () => {
         AlertIOS.alert(
@@ -80,4 +85,5 @@ const styles = StyleSheet.create({
 BoardsFooter.propTypes = {
     navigation: PropTypes.object,
     selected: PropTypes.object,
+    afterDelete: PropTypes.func,
 };

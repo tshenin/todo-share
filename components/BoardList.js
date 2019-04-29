@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { View, StyleSheet, ScrollView } from 'react-native';
+import { View, StyleSheet, ScrollView, Vibration } from 'react-native';
 import PropTypes from 'prop-types';
 
 import { BoardItem } from './BoardItem';
@@ -8,9 +8,7 @@ import { FloatButton } from './FloatButton';
 import { routes } from '../services/consts';
 
 export class BoardList extends Component {
-    state = {
-        selected: null,
-    };
+    state = { selected: null };
 
     getBoardItems = () => {
         const { boards } = this.props;
@@ -33,6 +31,7 @@ export class BoardList extends Component {
         const { selected } = this.state;
 
         if (!selected || board.id === selected.id) {
+            this.setState({ selected: null });
             navigation.navigate(routes.Todos, {
                 boardId: board.id,
                 boardTitle: board.title,
@@ -44,11 +43,18 @@ export class BoardList extends Component {
     }
 
     selectBoard = (board) => {
+        Vibration.vibrate(100);
         this.setState({ selected: board });
-    };
+    }
 
     goToAddBoard = () => {
+        this.setState({ selected: null });
         this.props.navigation.navigate(routes.AddBoard);
+    }
+
+    afterDelete = () => {
+        this.props.updateBoards();
+        this.setState({ selected: null });
     }
 
     render() {
@@ -65,6 +71,7 @@ export class BoardList extends Component {
                 {selected && <BoardsFooter
                     selected={selected}
                     navigation={navigation}
+                    afterDelete={this.afterDelete}
                 />}
                 {!selected && <FloatButton
                     name="plus"
@@ -91,4 +98,5 @@ const styles = StyleSheet.create({
 BoardList.propTypes = {
     boards: PropTypes.array,
     navigation: PropTypes.object,
+    updateBoards: PropTypes.func,
 };
