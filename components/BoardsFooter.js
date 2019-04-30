@@ -50,7 +50,7 @@ export const BoardsFooter = (props) => {
             <View style={styles.iconWrapper}>
                 {selected
                     && <LabeledIcon
-                        label="Remove"
+                        label="Delete"
                         name="trash"
                         onPress={showDeleteAlert}
                     />

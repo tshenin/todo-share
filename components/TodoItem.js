@@ -3,12 +3,28 @@ import {
     TouchableHighlight, Text, StyleSheet, View,
 } from 'react-native';
 import PropTypes from 'prop-types';
+import Swipeable from 'react-native-gesture-handler/Swipeable';
 
 import { colors } from '../services/consts';
+import { LabeledIcon } from './LabeledIcon';
 
 export const TodoItem = (props) => {
-    const { todo } = props;
-    const onPress = () => {};
+    const { todo, onDelete } = props;
+    const onPress = () => { };
+    let swipeableRef;
+
+    const renderDeleteButton = () => (
+        <LabeledIcon
+            label="Delete"
+            name="trash"
+            mod="danger"
+        />
+    );
+
+    const deleteTodo = () => {
+        onDelete(todo.id);
+        swipeableRef.close();
+    };
 
     return (
         <TouchableHighlight
@@ -16,25 +32,33 @@ export const TodoItem = (props) => {
             underlayColor="white"
             onPress={onPress}
         >
-            <View style={styles.item}>
-                <Text style={styles.title}>{todo.title}</Text>
-                <Text style={styles.desc}>{todo.desc}</Text>
-            </View>
+            <Swipeable
+                // eslint-disable-next-line no-return-assign
+                ref={ref => swipeableRef = ref}
+                onSwipeableRightOpen={deleteTodo}
+                renderRightActions={renderDeleteButton}
+            >
+                <View style={styles.item}>
+                    <Text style={styles.title}>{todo.title}</Text>
+                    <Text style={styles.desc}>{todo.desc}</Text>
+                </View>
+            </Swipeable>
         </TouchableHighlight>
     );
 };
 
 const styles = StyleSheet.create({
     underlay: {
-        paddingTop: 20,
-        paddingLeft: 40,
-        paddingRight: 20,
+        marginLeft: 40,
+        marginRight: 20,
+        borderBottomWidth: 1,
+        borderBottomColor: colors.border,
     },
     item: {
         flex: 1,
-        borderBottomWidth: 1,
-        borderBottomColor: colors.border,
         paddingBottom: 10,
+        paddingTop: 20,
+        backgroundColor: 'white',
     },
     title: {
         fontSize: 24,
@@ -45,8 +69,12 @@ const styles = StyleSheet.create({
         fontWeight: '200',
         color: colors.textDark,
     },
+    actionButton: {
+        width: 100,
+    },
 });
 
 TodoItem.propTypes = {
     todo: PropTypes.object,
+    onDelete: PropTypes.func,
 };

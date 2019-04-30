@@ -9,3 +9,8 @@ export const addTodo = async (data) => {
     const response = await request('POST', 'todos', data);
     return response.data.data[0];
 };
+
+export const deleteTodo = async (id) => {
+    const response = await request('DELETE', `todos/${id}`);
+    return response.data.data;
+};

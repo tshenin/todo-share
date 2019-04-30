@@ -5,7 +5,7 @@ import PropTypes from 'prop-types';
 import { TodoItem } from './TodoItem';
 import { FloatButton } from './FloatButton';
 import { TodoForm } from './TodoForm';
-import { addTodo } from '../services/Todos';
+import { addTodo, deleteTodo } from '../services/Todos';
 
 export class TodoList extends Component {
     state = {
@@ -24,10 +24,21 @@ export class TodoList extends Component {
         return { todos };
     }
 
+    onDeleteTodo = async (id) => {
+        try {
+            await deleteTodo(id);
+            const todos = [...this.state.todos.filter(todo => todo.id !== id)];
+            this.setState({ todos });
+        } catch (e) {
+            console.error(e);
+        }
+    }
+
     getTodoItems = todos => todos.map(t => (
         <TodoItem
             todo={t}
             key={t.id}
+            onDelete={this.onDeleteTodo}
         />
     ));
 
@@ -42,7 +53,6 @@ export class TodoList extends Component {
             const newTodo = await addTodo(todo);
             this.setState({ todos: [...todos, newTodo] });
         } catch (e) {
-            // todo add error handler
             console.error(e);
         }
         this.setAddMode(false);
