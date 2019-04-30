@@ -1,6 +1,9 @@
 import React from 'react';
 import {
-    TouchableHighlight, Text, StyleSheet, View,
+    TouchableHighlight,
+    Text,
+    StyleSheet,
+    View,
 } from 'react-native';
 import PropTypes from 'prop-types';
 import Swipeable from 'react-native-gesture-handler/Swipeable';
@@ -9,8 +12,7 @@ import { colors } from '../services/consts';
 import { LabeledIcon } from './LabeledIcon';
 
 export const TodoItem = (props) => {
-    const { todo, onDelete } = props;
-    const onPress = () => { };
+    const { todo, onDelete, onPress } = props;
     let swipeableRef;
 
     const renderDeleteButton = () => (
@@ -77,4 +79,5 @@ const styles = StyleSheet.create({
 TodoItem.propTypes = {
     todo: PropTypes.object,
     onDelete: PropTypes.func,
+    onPress: PropTypes.func,
 };

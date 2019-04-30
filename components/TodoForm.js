@@ -9,10 +9,16 @@ import { LabeledInput } from './LabeledInput';
 import { CustomButton } from './CustomButton';
 
 export class TodoForm extends React.Component {
-    state = {
-        title: '',
-        desc: '',
+    constructor(props) {
+        super(props);
+        const { todo = {} } = this.props;
+        this.state = {
+            title: todo.title || '',
+            desc: todo.desc || '',
+        };
     }
+
+    isUpdateMode = () => !!(this.props.todo && this.props.todo.id)
 
     render() {
         const { onCancel, onSend } = this.props;
@@ -44,7 +50,8 @@ export class TodoForm extends React.Component {
                         onPress={onCancel}
                     />
                     <CustomButton
-                        title={'Add Todo'}
+                        disabled={!this.state.title}
+                        title={this.isUpdateMode() ? 'Update' : 'Add Todo'}
                         onPress={() => onSend({ ...this.state })}
                     />
                 </View>
@@ -72,4 +79,5 @@ const styles = StyleSheet.create({
 TodoForm.propTypes = {
     onCancel: PropTypes.func,
     onSend: PropTypes.func,
+    todo: PropTypes.object,
 };

@@ -5,14 +5,22 @@ import PropTypes from 'prop-types';
 import { colors } from '../services/consts';
 
 export const CustomButton = (props) => {
-    const { title, onPress, mod } = props;
+    const {
+        title,
+        onPress,
+        mod,
+        disabled,
+    } = props;
+
     return (
         <TouchableOpacity
             style={[
                 styles.button,
                 mod === 'light' && styles.lightButton,
                 mod === 'trans' && styles.transButton,
+
             ]}
+            disabled={disabled}
             onPress={onPress}
         >
             <Text
@@ -32,6 +40,9 @@ const styles = StyleSheet.create({
         backgroundColor: colors.additional,
         padding: 10,
         borderRadius: 10,
+    },
+    disabledButton: {
+        opacity: 0.8,
     },
     lightButton: {
         backgroundColor: 'white',
@@ -58,4 +69,5 @@ CustomButton.propTypes = {
     title: PropTypes.string,
     onPress: PropTypes.func,
     mod: PropTypes.string,
+    disabled: PropTypes.bool,
 };

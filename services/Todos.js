@@ -14,3 +14,8 @@ export const deleteTodo = async (id) => {
     const response = await request('DELETE', `todos/${id}`);
     return response.data.data;
 };
+
+export const updateTodoById = async (id, data) => {
+    const response = await request('PUT', `todos/${id}`, data);
+    return response.data.data[0];
+};
