@@ -36,11 +36,14 @@ exports[`Render BoardFooter 1`] = `
       onResponderTerminationRequest={[Function]}
       onStartShouldSetResponder={[Function]}
       style={
-        Object {
-          "alignItems": "center",
-          "flex": 1,
-          "justifyContent": "center",
-        }
+        Array [
+          Object {
+            "alignItems": "center",
+            "flex": 1,
+            "justifyContent": "center",
+          },
+          false,
+        ]
       }
     >
       <View
@@ -49,11 +52,14 @@ exports[`Render BoardFooter 1`] = `
         <Text />
         <Text
           style={
-            Object {
-              "color": "rgba(0, 0, 0, 0.6)",
-              "fontSize": 12,
-              "textAlign": "center",
-            }
+            Array [
+              Object {
+                "color": "rgba(0, 0, 0, 0.6)",
+                "fontSize": 12,
+                "textAlign": "center",
+              },
+              false,
+            ]
           }
         >
           Add todo
