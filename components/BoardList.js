@@ -3,9 +3,9 @@ import {
     View,
     StyleSheet,
     ScrollView,
-    Vibration,
 } from 'react-native';
 import PropTypes from 'prop-types';
+import { Haptic } from 'expo';
 
 import { BoardItem } from './BoardItem';
 import { BoardsFooter } from './BoardsFooter';
@@ -48,7 +48,7 @@ export class BoardList extends Component {
     }
 
     selectBoard = (board) => {
-        Vibration.vibrate(100);
+        Haptic.impact(Haptic.ImpactFeedbackStyle.Medium);
         this.setState({ selected: board });
     }
 
