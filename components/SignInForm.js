@@ -16,11 +16,13 @@ export class SignInForm extends Component {
     };
 
     signin = async () => {
+        const { email, password } = this.state;
+        if (!email || !password) {
+            return;
+        }
+
         try {
-            const { token } = await signIn({
-                username: this.state.email,
-                password: this.state.password,
-            });
+            const { token } = await signIn({ username: email, password });
             await SecureStore.setItemAsync('token', token);
             this.props.navigation.navigate('App');
         } catch (e) {
@@ -46,7 +48,7 @@ export class SignInForm extends Component {
                         mod='light'
                         value={this.state.email}
                         onChangeText={email => this.setState({ email })}
-                        maxLength={40}
+                        autoCapitalize='none'
                         color='white'
                     />
                 </View>

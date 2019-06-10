@@ -3,10 +3,10 @@ import { SecureStore } from 'expo';
 
 const getApiUrl = () => {
     // if (releaseChannel === undefined) {
-    // return 'http://localhost:1337/';
+    return 'http://localhost:1337/';
     // }
     // if (releaseChannel.contains('staging')) {
-    return 'http://194.87.95.58:1337/';
+    // return 'http://194.87.95.58:1337/';
     // }
     // if (releaseChannel.contains('prod')) {
     //     return 'http://194.87.95.58:1337/';

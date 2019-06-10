@@ -15,12 +15,14 @@ export class SignUpForm extends Component {
         password: '',
     };
 
-    signin = async () => {
+    signup = async () => {
+        const { email, password } = this.state;
+        if (!email || !password) {
+            return;
+        }
+
         try {
-            const { token } = await signUp({
-                username: this.state.email,
-                password: this.state.password,
-            });
+            const { token } = await signUp({ username: email, password });
             await SecureStore.setItemAsync('token', token);
             this.props.navigation.navigate('App');
         } catch (e) {
@@ -46,7 +48,7 @@ export class SignUpForm extends Component {
                         mod='light'
                         value={this.state.email}
                         onChangeText={email => this.setState({ email })}
-                        maxLength={40}
+                        autoCapitalize='none'
                         color='white'
                     />
                 </View>
@@ -63,7 +65,7 @@ export class SignUpForm extends Component {
                 <View style={styles.fieldset}>
                     <CustomButton
                         title='Sign Up'
-                        onPress={this.signin}
+                        onPress={this.signup}
                     />
                 </View>
                 <View style={styles.fieldset}>
