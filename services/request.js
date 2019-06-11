@@ -1,5 +1,5 @@
 import axios from 'axios';
-import { SecureStore } from 'expo';
+import { getItemAsync } from 'expo-secure-store';
 
 const getApiUrl = () => {
     // if (releaseChannel === undefined) {
@@ -16,7 +16,7 @@ const getApiUrl = () => {
 export const request = async (method, url, data, open) => {
     let headers = {};
     if (!open) {
-        const token = await SecureStore.getItemAsync('token');
+        const token = await getItemAsync('token');
         headers = {
             Authorization: `bearer ${token}`,
         };

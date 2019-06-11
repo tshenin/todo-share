@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { View, StyleSheet, Text } from 'react-native';
 import PropTypes from 'prop-types';
-import { SecureStore } from 'expo';
+import { setItemAsync } from 'expo-secure-store';
 
 import { colors } from '../services/consts';
 import { LabeledInput } from './LabeledInput';
@@ -23,7 +23,7 @@ export class SignUpForm extends Component {
 
         try {
             const { token } = await signUp({ username: email, password });
-            await SecureStore.setItemAsync('token', token);
+            await setItemAsync('token', token);
             this.props.navigation.navigate('App');
         } catch (e) {
             console.log(e);
