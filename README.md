@@ -26,3 +26,4 @@ yarn start
 - move to typescript
 - describe models to separate framework and business
 - run linting before commit
+- add sentry
